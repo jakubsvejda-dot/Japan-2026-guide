@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { AppHeader } from './components/AppHeader';
 import { HomePage } from './pages/HomePage';
-import { DayTokyo22Page } from './pages/DayTokyo22Page';
+import { DayGuidePage } from './pages/DayGuidePage';
+import { getDayGuide } from './data/dayRegistry';
 import './styles/global.css';
 
-type Route = 'home' | 'day-tokyo-22';
+type Route = { kind: 'home' } | { kind: 'day'; id: string };
 
 function readRoute(): Route {
-  return window.location.hash === '#/day/tokyo-22' ? 'day-tokyo-22' : 'home';
+  const match = window.location.hash.match(/^#\/day\/(.+)$/);
+  return match ? { kind: 'day', id: match[1] } : { kind: 'home' };
 }
 
 export default function App() {
@@ -28,21 +30,15 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  const openTokyoDay = () => {
-    window.location.hash = '/day/tokyo-22';
-  };
-
-  const goHome = () => {
-    window.location.hash = '/';
-  };
+  const guide = route.kind === 'day' ? getDayGuide(route.id) : undefined;
 
   return (
     <>
       <AppHeader isDark={isDark} onToggleTheme={() => setIsDark((value) => !value)} />
       <main>
-        {route === 'home'
-          ? <HomePage onOpenTokyoDay={openTokyoDay} />
-          : <DayTokyo22Page onBack={goHome} />}
+        {route.kind === 'home' || !guide
+          ? <HomePage onOpenTokyoDay={() => { window.location.hash = '/day/tokyo-22'; }} />
+          : <DayGuidePage guide={guide} onBack={() => { window.location.hash = '/'; }} />}
       </main>
     </>
   );

@@ -1,27 +1,6 @@
-export type TransitLeg = {
-  mode: 'walk' | 'metro' | 'yurikamome';
-  label: string;
-  from: string;
-  to: string;
-  detail: string;
-  line?: string;
-  lineCode?: string;
-  lineColor?: string;
-  duration: string;
-};
+import type { DayGuide } from './dayTypes';
 
-export type PlaceStory = {
-  id: string;
-  time: string;
-  name: string;
-  japanese: string;
-  lead: string;
-  body: string;
-  notice: string;
-  illustration: string;
-};
-
-export const tokyo22 = {
+export const tokyo22: DayGuide = {
   id: 'tokyo-22',
   date: '22. 7. 2026',
   weekday: 'středa',
@@ -164,7 +143,7 @@ export const tokyo22 = {
       lineColor: '#8f76b6',
       duration: 'asi 7 min',
     },
-  ] satisfies TransitLeg[],
+  ],
   places: [
     {
       id: 'meiji',
@@ -175,7 +154,8 @@ export const tokyo22 = {
       body:
         'Svatyně je věnovaná císaři Meidži a císařovně Šóken. Největší zážitek nepřichází až u hlavní budovy: začne už ve chvíli, kdy ruch Harajuku během několika kroků zmizí v lese.',
       notice:
-        'Všimněte si obrovských dřevěných torii, sudů se saké a dřevěných destiček ema. Od vstupu k hlavní svatyni je to nejméně dalších deset minut.',
+        'Od vstupu k hlavní svatyni je to nejméně dalších deset minut.',
+      observe: ['největší dřevěné torii', 'sudy se saké', 'destičky ema', 'případný svatební průvod'],
       illustration: '/Japan-2026-guide/assets/place-meiji.svg',
     },
     {
@@ -188,6 +168,7 @@ export const tokyo22 = {
         'Instalace se nesledují z bezpečné vzdálenosti. Budeme chodit bosky, projdeme vodou a vstoupíme do prostor, ve kterých se světlo i obraz mění podle přítomnosti lidí.',
       notice:
         'Vezměte oblečení, které lze vyhrnout nad kolena. Některé podlahy jsou zrcadlové; uvnitř jsou k dispozici bezplatné skříňky.',
+      observe: ['místnost s vodou', 'nekonečná zrcadla', 'květiny reagující na pohyb', 'nejpůsobivější změnu měřítka'],
       illustration: '/Japan-2026-guide/assets/place-teamlab.svg',
     },
     {
@@ -200,7 +181,66 @@ export const tokyo22 = {
         'Vyhlídka leží přímo nad Shibuya Station v komplexu Scramble Square. Z jedné strany uvidíme nejznámější přechod města, z druhé nekonečnou zástavbu a při dobré viditelnosti i Fuji.',
       notice:
         'Venkovní střecha může být kvůli počasí uzavřená. Volné předměty se ukládají do skříněk před vstupem na střechu.',
+      observe: ['Shibuya Crossing', 'Tokyo Skytree', 'Fuji při dobré viditelnosti', 'okamžik rozsvícení města'],
       illustration: '/Japan-2026-guide/assets/place-shibuya.svg',
     },
-  ] satisfies PlaceStory[],
+  ],
+  food: [
+    {
+      id: 'onigiri',
+      name: 'Onigiri',
+      japanese: 'おにぎり',
+      description: 'Rýžový trojúhelník s náplní. Ideální malá svačina do metra nebo před teamLabem.',
+      price: 'přibližně 130–250 ¥',
+      moment: 'Konbini ráno nebo při přesunu',
+      illustration: '/Japan-2026-guide/assets/food-onigiri.svg',
+      priority: 'must',
+    },
+    {
+      id: 'ramen',
+      name: 'Ramen',
+      japanese: 'ラーメン',
+      description: 'Rychlý klimatizovaný oběd v Harajuku. Každý si může vybrat vývar a sílu chuti.',
+      price: 'přibližně 900–1 600 ¥',
+      moment: 'Oběd před cestou do Toyosu',
+      illustration: '/Japan-2026-guide/assets/food-ramen.svg',
+      priority: 'must',
+    },
+    {
+      id: 'matcha-soft',
+      name: 'Matcha soft',
+      japanese: '抹茶ソフト',
+      description: 'Zelený čaj ve formě jemné zmrzliny. Dobrá protiváha horkému dni.',
+      price: 'přibližně 400–650 ¥',
+      moment: 'Harajuku nebo Shibuya',
+      illustration: '/Japan-2026-guide/assets/food-matcha.svg',
+      priority: 'nice',
+    },
+    {
+      id: 'melonpan',
+      name: 'Melonpan',
+      japanese: 'メロンパン',
+      description: 'Sladká houska s křupavou cukrovou krustou. Název odkazuje na vzhled, ne nutně chuť melounu.',
+      price: 'přibližně 200–450 ¥',
+      moment: 'Jen když ho uvidíte bez dlouhé fronty',
+      illustration: '/Japan-2026-guide/assets/food-melonpan.svg',
+      priority: 'curious',
+    },
+  ],
+  japanToday: [
+    {
+      title: 'Fronty na nástupišti',
+      text: 'Lidé čekají přesně u značek na podlaze a nejdřív nechají cestující vystoupit. Postavte se do jedné z vyznačených řad.',
+    },
+    {
+      title: 'Malý ručníček',
+      text: 'V létě ho Japonci často nosí kvůli potu. Hodí se i proto, že některé veřejné toalety nemají papírové ručníky.',
+    },
+    {
+      title: 'Ticho v metru',
+      text: 'Telefon se používá běžně, ale hovory jsou považované za rušivé. Batoh je slušné sundat ze zad.',
+    },
+  ],
+  packing: ['voda', 'SPF 50', 'malý ručníček', 'lehká pláštěnka', 'oblečení vhodné do teamLabu'],
+
 };

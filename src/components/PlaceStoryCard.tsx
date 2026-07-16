@@ -1,4 +1,5 @@
-import type { PlaceStory } from '../data/dayTokyo22';
+import type { PlaceStory } from '../data/dayTypes';
+import { ObservePanel } from './ObservePanel';
 
 type Props = {
   place: PlaceStory;
@@ -18,6 +19,7 @@ export function PlaceStoryCard({ place, reverse = false }: Props) {
         <h3>{place.lead}</h3>
         <p>{place.body}</p>
         <div className="notice-card">{place.notice}</div>
+        <ObservePanel items={place.observe} />
       </div>
     </article>
   );

@@ -1,4 +1,4 @@
-import type { TransitLeg } from '../data/dayTokyo22';
+import type { TransitLeg } from '../data/dayTypes';
 
 type Props = {
   legs: TransitLeg[];
