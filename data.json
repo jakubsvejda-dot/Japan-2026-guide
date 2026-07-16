@@ -22,6 +22,27 @@
       "color": "#d74a3f"
     },
     {
+      "id": "fuji",
+      "name": "Hora Fuji",
+      "jp": "富士山",
+      "tag": "Den, kdy budeme vyhlížet nejslavnější horu Japonska.",
+      "intro": "Fuji je symbolem Japonska i posvátnou horou. U jezera Kawaguchiko, v tradiční vesnici, u pramenů Oshino a od pagody Chureito ji pokaždé uvidíme z jiné perspektivy — pokud nám ji počasí ukáže.",
+      "highlights": [
+        "Lake Kawaguchiko",
+        "Oishi Park",
+        "Saiko Iyashi-no-Sato",
+        "Oshino Hakkai",
+        "Chureito Pagoda"
+      ],
+      "food": [
+        "hoto nudle",
+        "místní zmrzlina",
+        "výletní snack"
+      ],
+      "kids": "Hledání Fuji mezi mraky, prameny a výstup k ikonické pagodě.",
+      "color": "#d79a32"
+    },
+    {
       "id": "kyoto",
       "name": "Kjóto",
       "jp": "京都",
@@ -173,20 +194,33 @@
         "Hodně vody"
       ],
       "map": null,
-      "stops": [
-        {
-          "name": "Praha",
-          "icon": "flight"
-        },
-        {
-          "name": "Dubaj",
-          "icon": "plane"
-        },
-        {
-          "name": "Tokio",
-          "icon": "hotel"
-        }
-      ]
+      "transport": {
+        "summary": "Praha → Dubaj → Tokio",
+        "duration": "Celodenní cesta",
+        "cost": "Letenka",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "plane",
+            "from": "Praha",
+            "to": "Dubaj",
+            "detail": "Mezinárodní let Emirates; gate při přestupu ověřit na obrazovkách."
+          },
+          {
+            "mode": "walk",
+            "from": "Příletová gate DXB",
+            "to": "Odletová gate",
+            "detail": "Zůstat v tranzitu; letiště je velké."
+          },
+          {
+            "mode": "plane",
+            "from": "Dubaj",
+            "to": "Narita",
+            "detail": "Přílet 21. 7. v 17:35."
+          }
+        ]
+      },
+      "placeNotes": []
     },
     {
       "date": "21. 7.",
@@ -215,20 +249,33 @@
         "Limonáda"
       ],
       "map": "Toshi Center Hotel Tokyo",
-      "stops": [
-        {
-          "name": "Narita",
-          "icon": "plane"
-        },
-        {
-          "name": "Hotel",
-          "icon": "hotel"
-        },
-        {
-          "name": "Konbini",
-          "icon": "store"
-        }
-      ]
+      "transport": {
+        "summary": "Narita → Toshi Center Hotel",
+        "duration": "Asi 80–110 min po opuštění letiště",
+        "cost": "Letištní vlak + taxi",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "train",
+            "from": "Narita Airport",
+            "to": "Tokyo nebo Ueno",
+            "detail": "Vzít nejbližší pohodlný letištní expres."
+          },
+          {
+            "mode": "taxi",
+            "from": "Tokyo/Ueno",
+            "to": "Toshi Center Hotel",
+            "detail": "Po dlouhém letu jednoduché dokončení cesty."
+          },
+          {
+            "mode": "walk",
+            "from": "Hotel",
+            "to": "Konbini",
+            "detail": "Jen krátce podle energie."
+          }
+        ]
+      },
+      "placeNotes": []
     },
     {
       "date": "22. 7.",
@@ -267,26 +314,107 @@
         "Ramen"
       ],
       "map": "teamLab Planets Tokyo",
-      "stops": [
-        {
-          "name": "Hotel",
-          "icon": "hotel"
-        },
+      "transport": {
+        "summary": "Hotel → Meiji Jingu → teamLab → Shibuya",
+        "duration": "Přesuny během dne",
+        "cost": "Suica",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Toshi Center Hotel",
+            "to": "Nagatacho Station",
+            "detail": "Asi 5–8 min."
+          },
+          {
+            "mode": "metro",
+            "from": "Nagatacho Z04",
+            "to": "Omote-sando Z02",
+            "detail": "Hanzomon Line, směr Shibuya; 2 zastávky."
+          },
+          {
+            "mode": "transfer",
+            "from": "Omote-sando",
+            "to": "Chiyoda Line",
+            "detail": "Přestup uvnitř stanice."
+          },
+          {
+            "mode": "metro",
+            "from": "Omote-sando C04",
+            "to": "Meiji-jingumae C03",
+            "detail": "1 zastávka."
+          },
+          {
+            "mode": "walk",
+            "from": "Meiji-jingumae",
+            "to": "Meiji Jingu",
+            "detail": "5–10 min k jižnímu vstupu."
+          },
+          {
+            "mode": "walk",
+            "from": "Meiji Jingu",
+            "to": "Harajuku",
+            "detail": "Přímo u jižního vstupu."
+          },
+          {
+            "mode": "metro",
+            "from": "Meiji-jingumae C03",
+            "to": "Hibiya C09",
+            "detail": "Chiyoda Line; podchodem na Yurakucho."
+          },
+          {
+            "mode": "metro",
+            "from": "Yurakucho Y18",
+            "to": "Toyosu Y22",
+            "detail": "Yurakucho Line."
+          },
+          {
+            "mode": "train",
+            "from": "Toyosu",
+            "to": "Shin-toyosu",
+            "detail": "Yurikamome; 1 zastávka, teamLab u stanice."
+          },
+          {
+            "mode": "train",
+            "from": "Shin-toyosu",
+            "to": "Toyosu",
+            "detail": "Yurikamome zpět."
+          },
+          {
+            "mode": "metro",
+            "from": "Toyosu Y22",
+            "to": "Nagatacho Y16",
+            "detail": "Yurakucho Line."
+          },
+          {
+            "mode": "transfer",
+            "from": "Nagatacho",
+            "to": "Hanzomon Line",
+            "detail": "Delší přestup uvnitř stanice."
+          },
+          {
+            "mode": "metro",
+            "from": "Nagatacho Z04",
+            "to": "Shibuya Z01",
+            "detail": "3 zastávky; Shibuya Sky je v Scramble Square."
+          }
+        ]
+      },
+      "placeNotes": [
         {
           "name": "Meiji Jingu",
-          "icon": "torii"
+          "about": "Šintoistická svatyně ukrytá v lese. Hluk Harajuku zmizí během několika minut.",
+          "look": "Dřevěné torii, sudy se saké a destičky ema."
         },
         {
-          "name": "Harajuku",
-          "icon": "walk"
-        },
-        {
-          "name": "teamLab",
-          "icon": "art"
+          "name": "teamLab Planets",
+          "about": "Digitální instalace, do kterých se vstupuje bosky a někdy i vodou.",
+          "look": "Zrcadla, světlo a ztráta hranice mezi podlahou a stěnou."
         },
         {
           "name": "Shibuya Sky",
-          "icon": "view"
+          "about": "Střešní vyhlídka nad nejslavnější křižovatkou Tokia.",
+          "look": "Shibuya Crossing a proměna města po západu slunce."
         }
       ]
     },
@@ -327,26 +455,70 @@
         "Ekiben"
       ],
       "map": "Chureito Pagoda",
-      "stops": [
+      "transport": {
+        "summary": "Hotel → Tokyo Station → okruh Fuji → Tokio",
+        "duration": "Celý den",
+        "cost": "Výlet zaplacen",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "taxi",
+            "from": "Toshi Center Hotel",
+            "to": "Tokyo Station Marunouchi South Exit",
+            "detail": "Ráno nejspolehlivější."
+          },
+          {
+            "mode": "bus",
+            "from": "Tokyo Station",
+            "to": "Lake Kawaguchiko",
+            "detail": "Odjezd organizovaného výletu v 8:00."
+          },
+          {
+            "mode": "bus",
+            "from": "Kawaguchiko",
+            "to": "Iyashi-no-Sato",
+            "detail": "Přejezd řeší organizátor."
+          },
+          {
+            "mode": "bus",
+            "from": "Iyashi-no-Sato",
+            "to": "Oshino Hakkai",
+            "detail": "Pořadí se může změnit."
+          },
+          {
+            "mode": "bus",
+            "from": "Oshino Hakkai",
+            "to": "Chureito Pagoda",
+            "detail": "Závěrečná ikonická zastávka."
+          },
+          {
+            "mode": "bus",
+            "from": "Fuji area",
+            "to": "Tokio",
+            "detail": "Večerní návrat podle voucheru."
+          }
+        ]
+      },
+      "placeNotes": [
         {
-          "name": "Tokyo Station",
-          "icon": "train"
+          "name": "Lake Kawaguchiko",
+          "about": "Jedno z pěti jezer kolem Fuji a klasické místo pro pohled na horu.",
+          "look": "Odraz Fuji na vodě a Oishi Park."
         },
         {
-          "name": "Kawaguchiko",
-          "icon": "lake"
+          "name": "Iyashi-no-Sato",
+          "about": "Obnovená vesnice se slaměnými střechami ukazuje starý venkov pod Fuji.",
+          "look": "Řemeslné dílny a horu rámovanou mezi domy."
         },
         {
-          "name": "Iyashi village",
-          "icon": "village"
+          "name": "Oshino Hakkai",
+          "about": "Osm pramenů napájených vodou filtrovanou podzemím Fuji.",
+          "look": "Neobvykle průzračnou vodu."
         },
         {
-          "name": "Oshino",
-          "icon": "water"
-        },
-        {
-          "name": "Chureito",
-          "icon": "view"
+          "name": "Chureito Pagoda",
+          "about": "Pagoda nad Fujiyoshidou vytváří jeden z ikonických obrazů Japonska.",
+          "look": "Schody a pohled na Fuji za pagodou."
         }
       ]
     },
@@ -387,32 +559,45 @@
         "Izakaya"
       ],
       "map": "Nishiki Market Kyoto",
-      "stops": [
-        {
-          "name": "Hotel",
-          "icon": "hotel"
-        },
-        {
-          "name": "Tokyo Station",
-          "icon": "train"
-        },
-        {
-          "name": "Kyoto Station",
-          "icon": "train"
-        },
-        {
-          "name": "Kabin",
-          "icon": "hotel"
-        },
-        {
-          "name": "Nishiki",
-          "icon": "food"
-        },
-        {
-          "name": "Gion",
-          "icon": "walk"
-        }
-      ]
+      "transport": {
+        "summary": "Hotel → Tokyo Station → Kyoto → Kabin",
+        "duration": "Asi 3 h včetně rezervy",
+        "cost": "Nozomi + taxi",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "taxi",
+            "from": "Toshi Center Hotel",
+            "to": "Tokyo Station",
+            "detail": "Vyjet kolem 9:45–10:00."
+          },
+          {
+            "mode": "train",
+            "from": "Tokyo",
+            "to": "Kyoto",
+            "detail": "Nozomi 11:00, rezervováno."
+          },
+          {
+            "mode": "taxi",
+            "from": "Kyoto Station",
+            "to": "Kabin Kyoto",
+            "detail": "S kufry a v horku nejpraktičtější."
+          },
+          {
+            "mode": "walk",
+            "from": "Kabin",
+            "to": "Nishiki Market",
+            "detail": "Asi 10–15 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Nishiki",
+            "to": "Pontochō / Gion",
+            "detail": "Navazuje pěšky přes řeku Kamo."
+          }
+        ]
+      },
+      "placeNotes": []
     },
     {
       "date": "25. 7.",
@@ -457,30 +642,66 @@
         "Yudofu"
       ],
       "map": "Kiyomizu-dera",
-      "stops": [
+      "transport": {
+        "summary": "Kabin → Kiyomizu → čaj → Gion",
+        "duration": "Pěší den + ranní taxi",
+        "cost": "Taxi + vstupy",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "taxi",
+            "from": "Kabin Kyoto",
+            "to": "Gojo-zaka / Kiyomizu-michi",
+            "detail": "Asi 10–15 min podle provozu."
+          },
+          {
+            "mode": "walk",
+            "from": "Gojo-zaka",
+            "to": "Kiyomizu-dera",
+            "detail": "Asi 15 min do kopce."
+          },
+          {
+            "mode": "walk",
+            "from": "Kiyomizu",
+            "to": "Sannenzaka / Ninenzaka",
+            "detail": "Historická trasa z kopce."
+          },
+          {
+            "mode": "walk",
+            "from": "Ninenzaka",
+            "to": "Čajový obřad",
+            "detail": "Použít adresu rezervace; přijít o 10 min dřív."
+          },
+          {
+            "mode": "walk",
+            "from": "Čajový obřad",
+            "to": "Kodai-ji",
+            "detail": "Krátký přesun."
+          },
+          {
+            "mode": "walk",
+            "from": "Kodai-ji",
+            "to": "Gion / Shirakawa",
+            "detail": "Asi 15–25 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Gion",
+            "to": "Kabin",
+            "detail": "Asi 15–20 min; při únavě taxi."
+          }
+        ]
+      },
+      "placeNotes": [
         {
-          "name": "Kabin",
-          "icon": "hotel"
+          "name": "Kiyomizu-dera",
+          "about": "Chrám na svahu hory Otowa s dřevěnou terasou a výhledem přes Kjóto.",
+          "look": "Terasa, pagoda a pramen Otowa."
         },
         {
-          "name": "Kiyomizu",
-          "icon": "temple"
-        },
-        {
-          "name": "Sannenzaka",
-          "icon": "walk"
-        },
-        {
-          "name": "Čaj",
-          "icon": "tea"
-        },
-        {
-          "name": "Kodai-ji",
-          "icon": "temple"
-        },
-        {
-          "name": "Gion",
-          "icon": "walk"
+          "name": "Čajový obřad",
+          "about": "Rituál soustředění, přesných pohybů a péče o hosta.",
+          "look": "Metlička chasen, miska chawan a wagashi."
         }
       ]
     },
@@ -521,26 +742,66 @@
         "Lehká večeře"
       ],
       "map": "Arashiyama Bamboo Forest",
-      "stops": [
-        {
-          "name": "Kabin",
-          "icon": "hotel"
-        },
+      "transport": {
+        "summary": "Kabin → Arashiyama → workshop → hotel",
+        "duration": "Vlak + taxi",
+        "cost": "Hankyu + taxi",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Kabin",
+            "to": "Kyoto-kawaramachi",
+            "detail": "Oficiálně asi 6 min."
+          },
+          {
+            "mode": "train",
+            "from": "Kyoto-kawaramachi",
+            "to": "Katsura",
+            "detail": "Hankyu Kyoto Line."
+          },
+          {
+            "mode": "transfer",
+            "from": "Katsura",
+            "to": "Arashiyama Line",
+            "detail": "Přestup na krátkou větev."
+          },
+          {
+            "mode": "train",
+            "from": "Katsura",
+            "to": "Hankyu Arashiyama",
+            "detail": "Konečná."
+          },
+          {
+            "mode": "walk",
+            "from": "Hankyu Arashiyama",
+            "to": "Bamboo Grove",
+            "detail": "Most 8–10 min, háj dalších 10–15 min."
+          },
+          {
+            "mode": "taxi",
+            "from": "Arashiyama",
+            "to": "Shugakuin Daidocho 16",
+            "detail": "Vyjet kolem 12:20; ukázat japonskou adresu."
+          },
+          {
+            "mode": "taxi",
+            "from": "Workshop",
+            "to": "Kabin",
+            "detail": "Nejjednodušší návrat."
+          }
+        ]
+      },
+      "placeNotes": [
         {
           "name": "Arashiyama",
-          "icon": "bamboo"
+          "about": "Čtvrť, kde Kjóto přechází do kopců; bambus je jen jedna část.",
+          "look": "Světlo mezi bambusem a zahradu Okochi Sanso."
         },
         {
-          "name": "Okochi Sanso",
-          "icon": "garden"
-        },
-        {
-          "name": "Workshop",
-          "icon": "samurai"
-        },
-        {
-          "name": "Hotel",
-          "icon": "hotel"
+          "name": "Samurajský workshop",
+          "about": "Praktická zkušenost s postojem, soustředěním a kontrolou pohybu.",
+          "look": "Jak držení těla mění sílu pohybu."
         }
       ]
     },
@@ -586,30 +847,78 @@
         "Mořské plody"
       ],
       "map": "Dotonbori Osaka",
-      "stops": [
-        {
-          "name": "Kabin",
-          "icon": "hotel"
-        },
+      "transport": {
+        "summary": "Kabin → Fushimi Inari → Osaka hotel",
+        "duration": "Půlden + meziměstský přesun",
+        "cost": "Keihan + JR + metro",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Kabin",
+            "to": "Gion-shijo",
+            "detail": "Asi 10–12 min."
+          },
+          {
+            "mode": "train",
+            "from": "Gion-shijo",
+            "to": "Fushimi-inari",
+            "detail": "Keihan; vzít spoj, který zde zastavuje."
+          },
+          {
+            "mode": "walk",
+            "from": "Fushimi-inari Station",
+            "to": "Svatyně",
+            "detail": "Asi 5 min."
+          },
+          {
+            "mode": "train",
+            "from": "Fushimi-inari",
+            "to": "Gion-shijo",
+            "detail": "Návrat pro kufry."
+          },
+          {
+            "mode": "taxi",
+            "from": "Kabin",
+            "to": "Kyoto Station",
+            "detail": "S kufry nejpraktičtější."
+          },
+          {
+            "mode": "train",
+            "from": "Kyoto",
+            "to": "Osaka",
+            "detail": "JR Special Rapid, bez rezervace."
+          },
+          {
+            "mode": "metro",
+            "from": "Umeda",
+            "to": "Namba",
+            "detail": "Midosuji Line."
+          },
+          {
+            "mode": "walk",
+            "from": "Namba",
+            "to": "Apartment Hotel 11",
+            "detail": "Asi 10–15 min; lze krátké taxi."
+          },
+          {
+            "mode": "walk",
+            "from": "Hotel",
+            "to": "Kuromon / Dotonbori",
+            "detail": "Vše v pěší vzdálenosti."
+          }
+        ]
+      },
+      "placeNotes": [
         {
           "name": "Fushimi Inari",
-          "icon": "torii"
-        },
-        {
-          "name": "Osaka",
-          "icon": "train"
-        },
-        {
-          "name": "Kuromon",
-          "icon": "food"
-        },
-        {
-          "name": "Den Den",
-          "icon": "game"
+          "about": "Tisíce torii darovali lidé a firmy jako prosbu nebo poděkování za úspěch.",
+          "look": "Jména dárců a kamenné lišky."
         },
         {
           "name": "Dotonbori",
-          "icon": "neon"
+          "about": "Neonové srdce Ósaky plné obřích reklam a pouličního jídla.",
+          "look": "Glico Man a mechanický krab."
         }
       ]
     },
@@ -655,26 +964,60 @@
         "Udon"
       ],
       "map": "Todai-ji Nara",
-      "stops": [
-        {
-          "name": "Osaka",
-          "icon": "hotel"
-        },
-        {
-          "name": "Kintetsu Nara",
-          "icon": "train"
-        },
+      "transport": {
+        "summary": "Hotel → Kintetsu Nara → park → zpět",
+        "duration": "Asi 40 min vlakem jedním směrem",
+        "cost": "Kintetsu; Suica",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Hotel",
+            "to": "Kintetsu-Nippombashi",
+            "detail": "Asi 3–8 min."
+          },
+          {
+            "mode": "train",
+            "from": "Kintetsu-Nippombashi",
+            "to": "Kintetsu-Nara",
+            "detail": "Přímý Rapid Express nebo Express."
+          },
+          {
+            "mode": "walk",
+            "from": "Kintetsu-Nara",
+            "to": "Nara Park",
+            "detail": "5–10 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Nara Park",
+            "to": "Todai-ji",
+            "detail": "15–20 min mezi jeleny."
+          },
+          {
+            "mode": "walk",
+            "from": "Todai-ji",
+            "to": "Kasuga / Naramachi",
+            "detail": "Vybrat podle energie."
+          },
+          {
+            "mode": "train",
+            "from": "Kintetsu-Nara",
+            "to": "Kintetsu-Nippombashi",
+            "detail": "Přímý návrat."
+          }
+        ]
+      },
+      "placeNotes": [
         {
           "name": "Nara Park",
-          "icon": "deer"
+          "about": "Jeleni jsou tradičně považováni za posly bohů a naučili se uklánět.",
+          "look": "Po sušenkách ukažte prázdné ruce."
         },
         {
           "name": "Todai-ji",
-          "icon": "temple"
-        },
-        {
-          "name": "Nakatanidou",
-          "icon": "food"
+          "about": "Monumentální dřevěná hala ukrývá obřího bronzového Buddhu.",
+          "look": "Měřítko haly a otvor ve sloupu."
         }
       ]
     },
@@ -720,28 +1063,57 @@
         "Rikuro cheesecake"
       ],
       "map": "Umeda Sky Building",
-      "stops": [
-        {
-          "name": "Hotel",
-          "icon": "hotel"
-        },
-        {
-          "name": "Osaka Castle",
-          "icon": "castle"
-        },
-        {
-          "name": "Herna",
-          "icon": "game"
-        },
-        {
-          "name": "Amerikamura",
-          "icon": "walk"
-        },
-        {
-          "name": "Umeda Sky",
-          "icon": "view"
-        }
-      ]
+      "transport": {
+        "summary": "Ósaka napříč městem",
+        "duration": "Úseky 10–30 min",
+        "cost": "Osaka Metro",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "metro",
+            "from": "Nippombashi",
+            "to": "Tanimachi 4-chome",
+            "detail": "Sakaisuji Line, přestup na Chuo Line."
+          },
+          {
+            "mode": "walk",
+            "from": "Tanimachi 4-chome",
+            "to": "Osaka Castle Park",
+            "detail": "10–15 min."
+          },
+          {
+            "mode": "metro",
+            "from": "Castle area",
+            "to": "Namba",
+            "detail": "Vrátit se na herny a oběd."
+          },
+          {
+            "mode": "walk",
+            "from": "Namba",
+            "to": "Amerikamura",
+            "detail": "15–20 min přes Shinsaibashi."
+          },
+          {
+            "mode": "metro",
+            "from": "Shinsaibashi",
+            "to": "Umeda",
+            "detail": "Midosuji Line."
+          },
+          {
+            "mode": "walk",
+            "from": "Umeda",
+            "to": "Umeda Sky Building",
+            "detail": "10–15 min."
+          },
+          {
+            "mode": "metro",
+            "from": "Umeda",
+            "to": "Namba/Nippombashi",
+            "detail": "Návrat podle večeře."
+          }
+        ]
+      },
+      "placeNotes": []
     },
     {
       "date": "30. 7.",
@@ -780,30 +1152,73 @@
         "Momiji manju"
       ],
       "map": "Itsukushima Shrine",
-      "stops": [
+      "transport": {
+        "summary": "Hotel → Shin-Osaka → Hiroshima → Mijadžima",
+        "duration": "Asi 4 h s přestupy",
+        "cost": "Nozomi + JR + ferry",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Hotel",
+            "to": "Nippombashi Station",
+            "detail": "Krátká chůze."
+          },
+          {
+            "mode": "metro",
+            "from": "Nippombashi",
+            "to": "Namba",
+            "detail": "Sennichimae Line; 1 zastávka."
+          },
+          {
+            "mode": "transfer",
+            "from": "Namba",
+            "to": "Midosuji Line",
+            "detail": "Počítat s chůzí uvnitř stanice."
+          },
+          {
+            "mode": "metro",
+            "from": "Namba",
+            "to": "Shin-Osaka",
+            "detail": "Bez přestupu."
+          },
+          {
+            "mode": "train",
+            "from": "Shin-Osaka",
+            "to": "Hiroshima",
+            "detail": "Nozomi 10:17, rezervováno."
+          },
+          {
+            "mode": "train",
+            "from": "Hiroshima",
+            "to": "Miyajimaguchi",
+            "detail": "JR Sanyo Main Line, asi 25–30 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Miyajimaguchi Station",
+            "to": "Ferry",
+            "detail": "5–7 min."
+          },
+          {
+            "mode": "ferry",
+            "from": "Miyajimaguchi",
+            "to": "Miyajima",
+            "detail": "Asi 10 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Miyajima pier",
+            "to": "Mikuniya",
+            "detail": "15–20 min s kufry."
+          }
+        ]
+      },
+      "placeNotes": [
         {
-          "name": "Hotel",
-          "icon": "hotel"
-        },
-        {
-          "name": "Shin-Osaka",
-          "icon": "train"
-        },
-        {
-          "name": "Hiroshima",
-          "icon": "train"
-        },
-        {
-          "name": "Miyajimaguchi",
-          "icon": "ferry"
-        },
-        {
-          "name": "Mikuniya",
-          "icon": "hotel"
-        },
-        {
-          "name": "Torii",
-          "icon": "torii"
+          "name": "Mijadžima",
+          "about": "Posvátný ostrov se slavnou torii stojící v moři před svatyní Itsukushima.",
+          "look": "Stejné místo při přílivu, západu a po setmění."
         }
       ]
     },
@@ -843,32 +1258,63 @@
         "Jednoduchá večeře u moře"
       ],
       "map": "Seaside Stay Tsutsuji-so",
-      "stops": [
-        {
-          "name": "Mikuniya",
-          "icon": "hotel"
-        },
-        {
-          "name": "Daisho-in / Misen",
-          "icon": "temple"
-        },
-        {
-          "name": "Hiroshima",
-          "icon": "train"
-        },
-        {
-          "name": "Okayama",
-          "icon": "train"
-        },
-        {
-          "name": "Uno",
-          "icon": "ferry"
-        },
-        {
-          "name": "Tsutsuji-so",
-          "icon": "hotel"
-        }
-      ]
+      "transport": {
+        "summary": "Mijadžima → Hiroshima → Okayama → Naošima",
+        "duration": "Většina odpoledne",
+        "cost": "JR + Nozomi + ferry",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Mikuniya",
+            "to": "Miyajima pier",
+            "detail": "15–20 min."
+          },
+          {
+            "mode": "ferry",
+            "from": "Miyajima",
+            "to": "Miyajimaguchi",
+            "detail": "První vhodný spoj."
+          },
+          {
+            "mode": "train",
+            "from": "Miyajimaguchi",
+            "to": "Hiroshima",
+            "detail": "JR Sanyo Line."
+          },
+          {
+            "mode": "train",
+            "from": "Hiroshima",
+            "to": "Okayama",
+            "detail": "Nozomi 162 v 14:14."
+          },
+          {
+            "mode": "train",
+            "from": "Okayama",
+            "to": "Uno",
+            "detail": "JR Uno Line; někdy přestup v Chayamachi."
+          },
+          {
+            "mode": "walk",
+            "from": "Uno Station",
+            "to": "Uno Port",
+            "detail": "3–5 min."
+          },
+          {
+            "mode": "ferry",
+            "from": "Uno",
+            "to": "Miyanoura",
+            "detail": "Bezpečně navazující spoj."
+          },
+          {
+            "mode": "bus",
+            "from": "Miyanoura",
+            "to": "Tsutsuji-so",
+            "detail": "Town Bus; při nenávaznosti taxi."
+          }
+        ]
+      },
+      "placeNotes": []
     },
     {
       "date": "1. 8.",
@@ -917,30 +1363,72 @@
         "Piknik"
       ],
       "map": "Red Pumpkin Naoshima",
-      "stops": [
-        {
-          "name": "Tsutsuji-so",
-          "icon": "hotel"
-        },
-        {
-          "name": "Miyanoura",
-          "icon": "bike"
-        },
-        {
-          "name": "Red Pumpkin",
-          "icon": "art"
-        },
+      "transport": {
+        "summary": "Tsutsuji-so → Miyanoura → Honmura → pláž",
+        "duration": "Celodenní okruh",
+        "cost": "Elektrokola + bus",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "bus",
+            "from": "Tsutsuji-so",
+            "to": "Miyanoura",
+            "detail": "Ranní Town Bus; být u Ougiya před 10:00."
+          },
+          {
+            "mode": "bike",
+            "from": "Ougiya",
+            "to": "Red Pumpkin",
+            "detail": "Krátce u přístavu."
+          },
+          {
+            "mode": "bike",
+            "from": "Miyanoura",
+            "to": "Honmura",
+            "detail": "Asi 15–25 min podle tempa."
+          },
+          {
+            "mode": "walk",
+            "from": "Honmura",
+            "to": "Art House Project",
+            "detail": "Kola zaparkovat a vesnici projít pěšky."
+          },
+          {
+            "mode": "bike",
+            "from": "Honmura",
+            "to": "Benesse / Yellow Pumpkin",
+            "detail": "Kopcovitější úsek."
+          },
+          {
+            "mode": "walk",
+            "from": "Yellow Pumpkin",
+            "to": "Tsutsuji beach",
+            "detail": "Přímo u pobřeží."
+          },
+          {
+            "mode": "bike",
+            "from": "Tsutsuji area",
+            "to": "Miyanoura",
+            "detail": "Vrátit kola včas."
+          },
+          {
+            "mode": "bus",
+            "from": "Miyanoura",
+            "to": "Tsutsuji-so",
+            "detail": "Town Bus nebo taxi."
+          }
+        ]
+      },
+      "placeNotes": [
         {
           "name": "Honmura",
-          "icon": "village"
+          "about": "Stará vesnice, kde se současné umění zabydlelo v opuštěných domech.",
+          "look": "Úzké uličky a nenápadné vstupy do galerií."
         },
         {
-          "name": "Yellow Pumpkin",
-          "icon": "art"
-        },
-        {
-          "name": "Pláž",
-          "icon": "beach"
+          "name": "Dýně Yayoi Kusama",
+          "about": "Červená a žlutá dýně jsou symboly Naošimy.",
+          "look": "Jak se puntíky mění podle moře a světla."
         }
       ]
     },
@@ -981,22 +1469,49 @@
         "Večeře u moře"
       ],
       "map": "Chichu Art Museum",
-      "stops": [
+      "transport": {
+        "summary": "Tsutsuji-so → Chichu → Benesse → pláž",
+        "duration": "Krátké, ale kopcovité přesuny",
+        "cost": "Shuttle / pěšky",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "bus",
+            "from": "Tsutsuji-so",
+            "to": "Benesse area",
+            "detail": "Areálový shuttle podle jízdního řádu."
+          },
+          {
+            "mode": "bus",
+            "from": "Benesse area",
+            "to": "Chichu",
+            "detail": "Shuttle nebo pěšky podle vedra."
+          },
+          {
+            "mode": "walk",
+            "from": "Chichu",
+            "to": "Lee Ufan / Benesse",
+            "detail": "Jen podle chuti."
+          },
+          {
+            "mode": "bus",
+            "from": "Benesse area",
+            "to": "Tsutsuji-so",
+            "detail": "Shuttle zpět."
+          },
+          {
+            "mode": "walk",
+            "from": "Tsutsuji-so",
+            "to": "Pláž",
+            "detail": "Přímo u ubytování."
+          }
+        ]
+      },
+      "placeNotes": [
         {
-          "name": "Tsutsuji-so",
-          "icon": "hotel"
-        },
-        {
-          "name": "Chichu",
-          "icon": "art"
-        },
-        {
-          "name": "Benesse",
-          "icon": "art"
-        },
-        {
-          "name": "Pláž",
-          "icon": "beach"
+          "name": "Chichu Art Museum",
+          "about": "Tadao Ando ukryl většinu budovy pod zem, ale dovnitř stále vede přirozené světlo.",
+          "look": "Jak se díla mění podle denní doby."
         }
       ]
     },
@@ -1046,34 +1561,85 @@
         "Ekiben"
       ],
       "map": "Himeji Castle",
-      "stops": [
+      "transport": {
+        "summary": "Naošima → Himeji → Tokio",
+        "duration": "Celodenní přesun s hradem",
+        "cost": "Ferry + JR + Nozomi",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "bus",
+            "from": "Tsutsuji-so",
+            "to": "Miyanoura",
+            "detail": "Bus nebo taxi s rezervou."
+          },
+          {
+            "mode": "ferry",
+            "from": "Miyanoura",
+            "to": "Uno",
+            "detail": "9:52–10:12."
+          },
+          {
+            "mode": "walk",
+            "from": "Uno Port",
+            "to": "Uno Station",
+            "detail": "3–5 min."
+          },
+          {
+            "mode": "train",
+            "from": "Uno",
+            "to": "Okayama",
+            "detail": "JR Uno Line; někdy Chayamachi."
+          },
+          {
+            "mode": "train",
+            "from": "Okayama",
+            "to": "Himeji",
+            "detail": "První vhodný rychlý spoj."
+          },
+          {
+            "mode": "locker",
+            "from": "Himeji Station",
+            "to": "Úschovna",
+            "detail": "Skříňky nebo přepážka."
+          },
+          {
+            "mode": "walk",
+            "from": "North Exit",
+            "to": "Himeji Castle",
+            "detail": "Přímo po Otemae-dori, asi 20 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Himeji Castle",
+            "to": "Koko-en",
+            "detail": "Hned vedle."
+          },
+          {
+            "mode": "walk",
+            "from": "Koko-en",
+            "to": "Himeji Station",
+            "detail": "Asi 20 min."
+          },
+          {
+            "mode": "train",
+            "from": "Himeji",
+            "to": "Tokyo",
+            "detail": "Nozomi 46 v 17:59, příjezd 20:57."
+          },
+          {
+            "mode": "taxi",
+            "from": "Tokyo Station",
+            "to": "Asakusa hotel",
+            "detail": "Po dlouhém dni nejpohodlnější."
+          }
+        ]
+      },
+      "placeNotes": [
         {
-          "name": "Tsutsuji-so",
-          "icon": "hotel"
-        },
-        {
-          "name": "Miyanoura",
-          "icon": "ferry"
-        },
-        {
-          "name": "Uno",
-          "icon": "train"
-        },
-        {
-          "name": "Okayama",
-          "icon": "train"
-        },
-        {
-          "name": "Himeji",
-          "icon": "castle"
-        },
-        {
-          "name": "Koko-en",
-          "icon": "garden"
-        },
-        {
-          "name": "Tokio",
-          "icon": "train"
+          "name": "Himeji Castle",
+          "about": "Nejzachovalejší velký japonský hrad, přezdívaný Bílá volavka.",
+          "look": "Obranný labyrint a strmé schody."
         }
       ]
     },
@@ -1124,30 +1690,72 @@
         "Asakusa snack"
       ],
       "map": "Sushi Edomaru Asakusa",
-      "stops": [
-        {
-          "name": "Hotel",
-          "icon": "hotel"
-        },
-        {
-          "name": "Toyosu",
-          "icon": "fish"
-        },
+      "transport": {
+        "summary": "Asakusa → Sensō-ji → sushi → Akihabara → Haneda",
+        "duration": "Pěšky + přímý vlak",
+        "cost": "Suica + taxi",
+        "confidence": "Trasa používá skutečné stanice a linky. Nástupiště a nejbližší odjezd ověřte v den cesty.",
+        "steps": [
+          {
+            "mode": "walk",
+            "from": "Asakusa View Annex",
+            "to": "Sensō-ji",
+            "detail": "5–10 min."
+          },
+          {
+            "mode": "walk",
+            "from": "Sensō-ji",
+            "to": "Kaminarimon",
+            "detail": "Přes Nakamise."
+          },
+          {
+            "mode": "walk",
+            "from": "Kaminarimon",
+            "to": "Sushi Edomaru",
+            "detail": "Dorazit před 12:00."
+          },
+          {
+            "mode": "walk",
+            "from": "Edomaru",
+            "to": "Tsukuba Express Asakusa",
+            "detail": "8–12 min."
+          },
+          {
+            "mode": "train",
+            "from": "Asakusa",
+            "to": "Akihabara",
+            "detail": "Přímý Tsukuba Express."
+          },
+          {
+            "mode": "train",
+            "from": "Akihabara",
+            "to": "Asakusa",
+            "detail": "Stejnou linkou zpět."
+          },
+          {
+            "mode": "walk",
+            "from": "Asakusa Station",
+            "to": "Hotel",
+            "detail": "Vyzvednout kufry."
+          },
+          {
+            "mode": "taxi",
+            "from": "Hotel",
+            "to": "Haneda",
+            "detail": "Odjezd kolem 20:30."
+          }
+        ]
+      },
+      "placeNotes": [
         {
           "name": "Sensō-ji",
-          "icon": "temple"
-        },
-        {
-          "name": "Edomaru",
-          "icon": "sushi"
+          "about": "Nejstarší chrám v Tokiu a centrum historické Asakusy.",
+          "look": "Lampion Kaminarimon a kouř kadidla."
         },
         {
           "name": "Akihabara",
-          "icon": "game"
-        },
-        {
-          "name": "Haneda",
-          "icon": "plane"
+          "about": "Čtvrť her, elektroniky, anime a sběratelských obchodů.",
+          "look": "Patra gachaponů a retro arkády."
         }
       ]
     }
@@ -1445,5 +2053,6 @@
       "long": "Vypadá jako flan nebo crème caramel. V konbini bývá chlazený v kelímku a je to jeden z nejjednodušších prvních dezertů k ochutnání.",
       "icon": "pudding"
     }
-  ]
+  ],
+  "verificationNote": "Schémata nejsou v měřítku. Stanice, linky a pořadí zastávek odpovídají skutečné síti; aktuální nástupiště, výluky a nejbližší odjezd ověřte v den cesty."
 }
