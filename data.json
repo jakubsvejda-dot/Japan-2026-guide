@@ -1,0 +1,1091 @@
+{
+  "meta": {
+    "title": "Mise tří dobrodruhů",
+    "subtitle": "Japonsko 2026",
+    "travellers": "Jakub · Filip · Nela",
+    "dates": "20. 7. – 5. 8. 2026",
+    "flightOut": "5. 8. 2026 · 00:05 · HND"
+  },
+  "hotels": [
+    {
+      "city": "Tokio I",
+      "dates": "21.–24. 7.",
+      "name": "Toshi Center Hotel",
+      "area": "Chiyoda"
+    },
+    {
+      "city": "Kjóto",
+      "dates": "24.–27. 7.",
+      "name": "Kabin Kyoto",
+      "area": "Shimogyo"
+    },
+    {
+      "city": "Ósaka",
+      "dates": "27.–30. 7.",
+      "name": "Apartment Hotel 11 Nippombashi",
+      "area": "Nippombashi"
+    },
+    {
+      "city": "Mijadžima",
+      "dates": "30.–31. 7.",
+      "name": "Guest House Mikuniya",
+      "area": "Miyajima"
+    },
+    {
+      "city": "Naošima",
+      "dates": "31. 7.–3. 8.",
+      "name": "Seaside Stay Tsutsuji-so",
+      "area": "Tsutsuji beach"
+    },
+    {
+      "city": "Tokio II",
+      "dates": "3.–4. 8.",
+      "name": "Asakusa View Hotel Annex Rokku",
+      "area": "Asakusa"
+    }
+  ],
+  "reservations": [
+    {
+      "date": "22. 7.",
+      "time": "13:30–14:00",
+      "name": "teamLab Planets",
+      "status": "Potvrzeno",
+      "icon": "◌"
+    },
+    {
+      "date": "22. 7.",
+      "time": "16:40",
+      "name": "Shibuya Sky",
+      "status": "Potvrzeno",
+      "icon": "↗"
+    },
+    {
+      "date": "23. 7.",
+      "time": "08:00",
+      "name": "Výlet Fuji",
+      "status": "Potvrzeno",
+      "icon": "△"
+    },
+    {
+      "date": "24. 7.",
+      "time": "11:00",
+      "name": "Nozomi Tokyo → Kyoto",
+      "status": "Potvrzeno",
+      "icon": "━"
+    },
+    {
+      "date": "25. 7.",
+      "time": "12:30",
+      "name": "Čajový obřad",
+      "status": "Potvrzeno",
+      "icon": "◒"
+    },
+    {
+      "date": "26. 7.",
+      "time": "14:00",
+      "name": "Kendo & Samurai Experience",
+      "status": "Potvrzeno",
+      "icon": "╱"
+    },
+    {
+      "date": "30. 7.",
+      "time": "10:17",
+      "name": "Nozomi Shin-Osaka → Hiroshima",
+      "status": "Potvrzeno",
+      "icon": "━"
+    },
+    {
+      "date": "31. 7.",
+      "time": "14:14",
+      "name": "Nozomi 162 Hiroshima → Okayama",
+      "status": "Potvrzeno",
+      "icon": "━"
+    },
+    {
+      "date": "1. 8.",
+      "time": "10:00",
+      "name": "3× elektrokolo Ougiya",
+      "status": "Potvrzeno",
+      "icon": "○"
+    },
+    {
+      "date": "2. 8.",
+      "time": "11:00",
+      "name": "Chichu Art Museum",
+      "status": "Potvrzeno",
+      "icon": "◇"
+    },
+    {
+      "date": "3. 8.",
+      "time": "17:59",
+      "name": "Nozomi 46 Himeji → Tokyo",
+      "status": "Potvrzeno",
+      "icon": "━"
+    },
+    {
+      "date": "4. 8.",
+      "time": "12:00",
+      "name": "Sushi Edomaru Asakusa",
+      "status": "Potvrzeno",
+      "icon": "◉"
+    }
+  ],
+  "days": [
+    {
+      "date": "20. 7.",
+      "weekday": "Pondělí",
+      "city": "Praha → Tokio",
+      "title": "Začíná mise",
+      "theme": "Dlouhý let, minimum stresu a pohodlný start.",
+      "hero": "flight",
+      "weather": "Letadlo",
+      "mission": "Každý má v příručním zavazadle jedno kompletní převlečení.",
+      "schedule": [
+        [
+          "Odlet",
+          "Praha → Dubaj → Tokio",
+          "Pas, mobil, peněženka a batoh vždy zkontrolovat při každém přesunu."
+        ],
+        [
+          "V letadle",
+          "Spánek a hydratace",
+          "Mikina po ruce, prázdná láhev doplnit po bezpečnostní kontrole."
+        ]
+      ],
+      "tips": [
+        "Neřešit časový posun násilím; spát, když to půjde.",
+        "Powerbanku vždy do příručního zavazadla."
+      ],
+      "food": [
+        "Lehké jídlo",
+        "Hodně vody"
+      ],
+      "map": null
+    },
+    {
+      "date": "21. 7.",
+      "weekday": "Úterý",
+      "city": "Tokio",
+      "title": "První večer v Japonsku",
+      "theme": "Přílet, hotel a velmi lehké seznámení s městem.",
+      "hero": "tokyo",
+      "weather": "Večer · horko",
+      "mission": "Koupit první nápoj z japonského automatu.",
+      "schedule": [
+        [
+          "17:35",
+          "Přílet NRT",
+          "Imigrační kontrola, zavazadla a cesta do města."
+        ],
+        [
+          "20:00–21:00",
+          "Toshi Center Hotel",
+          "Check-in, sprcha, krátká procházka jen podle energie."
+        ],
+        [
+          "Večer",
+          "Konbini poblíž hotelu",
+          "Onigiri, pití a malá první ochutnávka Japonska."
+        ]
+      ],
+      "tips": [
+        "První večer nepřidávat žádnou velkou atrakci.",
+        "Suicu mít připravenou v Apple Wallet."
+      ],
+      "food": [
+        "Onigiri",
+        "Japonská limonáda",
+        "Konbini dezert"
+      ],
+      "map": "https://maps.apple.com/?q=Toshi+Center+Hotel+Tokyo"
+    },
+    {
+      "date": "22. 7.",
+      "weekday": "Středa",
+      "city": "Tokio",
+      "title": "Od svatyně k neonům",
+      "theme": "Klid Meiji Jingu, Harajuku, teamLab a proměna Tokia ze dne do noci.",
+      "hero": "shibuya",
+      "weather": "35 °C · přeháňky",
+      "mission": "Na Shibuya Sky zůstat alespoň 20 minut po západu slunce.",
+      "schedule": [
+        [
+          "08:30",
+          "Snídaně v hotelu",
+          "Pohodový začátek, voda do batohu."
+        ],
+        [
+          "09:30",
+          "Meiji Jingu",
+          "Lesní cesta a šintoistická svatyně."
+        ],
+        [
+          "11:00",
+          "Harajuku",
+          "Takeshita, malé ochutnávky a oběd."
+        ],
+        [
+          "13:30–14:00",
+          "teamLab Planets",
+          "Rezervace. Počítat asi 90 minut."
+        ],
+        [
+          "15:15",
+          "Přesun do Shibuye",
+          "Nechat rezervu na dopravu a vedro."
+        ],
+        [
+          "16:40",
+          "Shibuya Sky",
+          "Rezervace. Denní světlo, západ i rozsvícené město."
+        ],
+        [
+          "19:30",
+          "Večeře v Shibuye",
+          "Sushi, ramen nebo izakaya podle chuti."
+        ]
+      ],
+      "tips": [
+        "V teamLabu mít oblečení vhodné pro vodní instalace.",
+        "Při vedru si dát klimatizovanou pauzu mezi teamLab a Shibuyou."
+      ],
+      "food": [
+        "Fluffy pancakes",
+        "Matcha",
+        "Ramen nebo sushi"
+      ],
+      "map": "https://maps.apple.com/?q=teamLab+Planets+Tokyo"
+    },
+    {
+      "date": "23. 7.",
+      "weekday": "Čtvrtek",
+      "city": "Fuji",
+      "title": "Den pod horou Fuji",
+      "theme": "Celodenní organizovaný výlet bez starostí s dopravou.",
+      "hero": "fuji",
+      "weather": "Proměnlivé",
+      "mission": "Vyfotit Fuji bez jiného turisty v záběru.",
+      "schedule": [
+        [
+          "07:15",
+          "Odchod z hotelu",
+          "Raději dřív kvůli rannímu setkání."
+        ],
+        [
+          "08:00",
+          "Tokyo Station",
+          "Odjezd zakoupeného výletu."
+        ],
+        [
+          "Dopoledne",
+          "Lake Kawaguchiko & Oishi Park",
+          "Výhledy, květiny a krátká procházka."
+        ],
+        [
+          "Poledne",
+          "Saiko Iyashi-no-Sato",
+          "Tradiční vesnice a oběd."
+        ],
+        [
+          "Odpoledne",
+          "Oshino Hakkai",
+          "Prameny z tajícího sněhu Fuji."
+        ],
+        [
+          "Odpoledne",
+          "Arakurayama Sengen Park",
+          "Chureito Pagoda a schody k ikonickému výhledu."
+        ],
+        [
+          "Večer",
+          "Návrat do Tokia",
+          "Lehká večeře poblíž hotelu."
+        ]
+      ],
+      "tips": [
+        "Počasí může Fuji úplně schovat; výlet má hodnotu i bez dokonalého výhledu.",
+        "Vezměte lehkou pláštěnku a pokrývku hlavy."
+      ],
+      "food": [
+        "Místní snack",
+        "Zmrzlina",
+        "Ekiben nebo lehká večeře"
+      ],
+      "map": "https://maps.apple.com/?q=Arakurayama+Sengen+Park"
+    },
+    {
+      "date": "24. 7.",
+      "weekday": "Pátek",
+      "city": "Tokio → Kjóto",
+      "title": "Přechod do tradičního Japonska",
+      "theme": "Shinkansen, první kjótské uličky a večerní atmosféra.",
+      "hero": "kyoto",
+      "weather": "36 °C · mírný déšť",
+      "mission": "Koupit ekiben a sníst ho v Shinkansenu.",
+      "schedule": [
+        [
+          "09:30",
+          "Check-out",
+          "Přesun na Tokyo Station s rezervou."
+        ],
+        [
+          "11:00",
+          "Nozomi Tokyo → Kyoto",
+          "Potvrzená rezervace, příjezd přibližně 13:15."
+        ],
+        [
+          "14:00",
+          "Kabin Kyoto",
+          "Odložit zavazadla nebo check-in."
+        ],
+        [
+          "15:00",
+          "Nishiki Market",
+          "Jen několik ochutnávek; trh postupně zavírá."
+        ],
+        [
+          "16:30",
+          "Řeka Kamo a Pontochō",
+          "Pomalá pěší procházka."
+        ],
+        [
+          "18:00",
+          "Gion a Shirakawa",
+          "Lampiony a první večer v Kjótu."
+        ],
+        [
+          "19:30",
+          "Izakaya",
+          "Více malých jídel na sdílení."
+        ]
+      ],
+      "tips": [
+        "Nishiki dát před Gion, ne obráceně.",
+        "V dešti jsou kjótské uličky krásné; stačí lehká pláštěnka a deštník."
+      ],
+      "food": [
+        "Ekiben",
+        "Nishiki ochutnávky",
+        "Izakaya"
+      ],
+      "map": "https://maps.apple.com/?q=Kabin+Kyoto"
+    },
+    {
+      "date": "25. 7.",
+      "weekday": "Sobota",
+      "city": "Kjóto",
+      "title": "Historické Kjóto",
+      "theme": "Kiyomizu, staré uličky, čajový obřad a večerní Gion.",
+      "hero": "tea",
+      "weather": "36 °C · mírný déšť",
+      "mission": "Najít nejhezčí boční uličku a nejlepší wagashi.",
+      "schedule": [
+        [
+          "08:15",
+          "Odchod z hotelu",
+          "Dřívější začátek kvůli vedru a davům."
+        ],
+        [
+          "08:45",
+          "Kiyomizu-dera",
+          "Hlavní terasa, výhled a klidnější okraje areálu."
+        ],
+        [
+          "10:30",
+          "Sannenzaka a Ninenzaka",
+          "Keramika, matcha a boční uličky."
+        ],
+        [
+          "12:30",
+          "Čajový obřad",
+          "Rezervováno, 50 minut. Přijít 10 minut předem."
+        ],
+        [
+          "13:40",
+          "Pozdní oběd",
+          "Yudofu, soba nebo lehký udon."
+        ],
+        [
+          "15:15",
+          "Kodai-ji",
+          "Zenová zahrada a klidnější tempo."
+        ],
+        [
+          "17:30",
+          "Gion a Shirakawa",
+          "Zlatá hodinka a večerní atmosféra."
+        ],
+        [
+          "19:00",
+          "Večeře",
+          "Izakaya nebo kjótská kuchyně."
+        ]
+      ],
+      "tips": [
+        "Čajový obřad nefotit celý; část zážitku je v tichu.",
+        "Po obřadu nikam nespěchat – právě to je smysl dne."
+      ],
+      "food": [
+        "Yudofu",
+        "Wagashi",
+        "Matcha",
+        "Kjótská izakaya"
+      ],
+      "map": "https://maps.apple.com/?q=Kiyomizu-dera+Kyoto"
+    },
+    {
+      "date": "26. 7.",
+      "weekday": "Neděle",
+      "city": "Kjóto",
+      "title": "Bambus a samurajové",
+      "theme": "Příroda dopoledne, praktický kendo zážitek odpoledne.",
+      "hero": "samurai",
+      "weather": "Horko",
+      "mission": "Zjistit, komu z vás nejlépe sedí samurajský postoj.",
+      "schedule": [
+        [
+          "08:30",
+          "Odjezd do Arashiyamy",
+          "Vlak; voda a ručníček do batohu."
+        ],
+        [
+          "09:15",
+          "Bambusový háj",
+          "Nezůstávat dlouho v nejrušnější části."
+        ],
+        [
+          "10:00",
+          "Okochi Sanso Garden",
+          "Zahrada, výhled a čaj."
+        ],
+        [
+          "11:45",
+          "Lehký oběd",
+          "Soba nebo udon."
+        ],
+        [
+          "12:20–12:30",
+          "Odjezd z Arashiyamy",
+          "Taxi je nejjistější cesta na workshop."
+        ],
+        [
+          "14:00",
+          "Kendo & Samurai Experience",
+          "Rezervováno; Shugakuin Daidocho 16."
+        ],
+        [
+          "16:30",
+          "Volný večer",
+          "Bez další velké atrakce."
+        ]
+      ],
+      "tips": [
+        "Taxi na workshop je rozumný luxus – šetří čas i nervy.",
+        "Po workshopu nechat večer úplně volný."
+      ],
+      "food": [
+        "Soba",
+        "Udon",
+        "Lehká večeře"
+      ],
+      "map": "https://maps.apple.com/?q=16+Shugakuin+Daidocho+Kyoto"
+    },
+    {
+      "date": "27. 7.",
+      "weekday": "Pondělí",
+      "city": "Kjóto → Ósaka",
+      "title": "Torii a první chuť Ósaky",
+      "theme": "Fushimi Inari ráno, poté lehký přesun a neonový večer.",
+      "hero": "osaka",
+      "weather": "Horko",
+      "mission": "Každý vybere jednu známou a jednu úplně novou ochutnávku.",
+      "schedule": [
+        [
+          "07:30",
+          "Snídaně a kufry na recepci",
+          "Na Fushimi vyrazit nalehko."
+        ],
+        [
+          "08:20",
+          "Fushimi Inari",
+          "Jít dál než k prvním torii; není nutné až na vrchol."
+        ],
+        [
+          "10:30",
+          "Návrat pro kufry",
+          "Krátká pauza a přesun."
+        ],
+        [
+          "11:30–12:30",
+          "Kjóto → Ósaka",
+          "Běžný vlak bez rezervace."
+        ],
+        [
+          "14:00",
+          "Apartment Hotel 11 Nippombashi",
+          "Odložit zavazadla nebo check-in."
+        ],
+        [
+          "15:00",
+          "Kuromon Market",
+          "Pozdní ochutnávkový oběd."
+        ],
+        [
+          "16:30",
+          "Den Den Town",
+          "Hry, elektronika a gachapon."
+        ],
+        [
+          "18:00",
+          "Dotonbori",
+          "Neony, Glico a večerní jídlo."
+        ]
+      ],
+      "tips": [
+        "Na Kuromonu nejdřív projít celý trh, až potom nakupovat.",
+        "Dotonbori si projít celé a teprve pak vybrat večeři."
+      ],
+      "food": [
+        "Wagyu špíz",
+        "Takoyaki",
+        "Mořské plody",
+        "Mochi"
+      ],
+      "map": "https://maps.apple.com/?q=Apartment+Hotel+11+Nippombashi"
+    },
+    {
+      "date": "28. 7.",
+      "weekday": "Úterý",
+      "city": "Nara",
+      "title": "Den mezi jeleny",
+      "theme": "Pohodový výlet, chrám, park a několik místních ochutnávek.",
+      "hero": "nara",
+      "weather": "Horko",
+      "mission": "Vyfotit jelena, který se uklání.",
+      "schedule": [
+        [
+          "08:30",
+          "Snídaně",
+          "Pozdější, pohodové ráno."
+        ],
+        [
+          "09:30",
+          "Kintetsu Nippombashi → Kintetsu Nara",
+          "Bez rezervace, stanice je blízko parku."
+        ],
+        [
+          "10:15",
+          "Nara Park",
+          "Jelení sušenky koupit až po chvíli."
+        ],
+        [
+          "11:00",
+          "Todai-ji",
+          "Velký Buddha a monumentální dřevěná hala."
+        ],
+        [
+          "13:00",
+          "Ochutnávkový oběd",
+          "Kakinoha-zushi, lehký udon nebo Mizuya Chaya."
+        ],
+        [
+          "14:30",
+          "Kasuga Taisha nebo Naramachi",
+          "Podle energie a vedra."
+        ],
+        [
+          "16:00",
+          "Nakatanidou",
+          "Čerstvé mochi."
+        ],
+        [
+          "17:00",
+          "Návrat do Ósaky",
+          "Večer kushikatsu nebo volno."
+        ]
+      ],
+      "tips": [
+        "Jeleni okamžitě poznají sušenky; nedržet celý balíček viditelně.",
+        "Nara má být odpočinkový den, ne závod mezi chrámy."
+      ],
+      "food": [
+        "Kakinoha-zushi",
+        "Mochi",
+        "Matcha",
+        "Udon"
+      ],
+      "map": "https://maps.apple.com/?q=Todai-ji+Nara"
+    },
+    {
+      "date": "29. 7.",
+      "weekday": "Středa",
+      "city": "Ósaka",
+      "title": "Zábavná Ósaka",
+      "theme": "Město bez povinných památek: park, herny, street culture a výhled.",
+      "hero": "arcade",
+      "weather": "Horko",
+      "mission": "Ochutnat během dne nejméně osm různých malých jídel.",
+      "schedule": [
+        [
+          "09:30",
+          "Osaka Castle Park",
+          "Fotka hradu a příjemná procházka; muzeum není nutné."
+        ],
+        [
+          "11:30",
+          "Round1 / velká herna",
+          "Arkády, sportovní hry nebo bowling."
+        ],
+        [
+          "13:30",
+          "Food hall",
+          "Každý si vybere něco jiného."
+        ],
+        [
+          "15:00",
+          "Amerikamura",
+          "Street art, vintage a mladá Ósaka."
+        ],
+        [
+          "16:30",
+          "Rikuro Cheesecake",
+          "Ochutnávka a krátká pauza."
+        ],
+        [
+          "18:00",
+          "Umeda Sky Building",
+          "Výhled podle počasí a energie."
+        ],
+        [
+          "20:00",
+          "Poslední velká večeře v Ósace",
+          "Okonomiyaki nebo kushikatsu."
+        ]
+      ],
+      "tips": [
+        "Když bude vedro extrémní, přesunout hernu do nejteplejší části dne.",
+        "Universal je vědomě vynechaný – pro vás je skutečná Ósaka lepší volba."
+      ],
+      "food": [
+        "Okonomiyaki",
+        "Kushikatsu",
+        "Rikuro cheesecake",
+        "Melon soda"
+      ],
+      "map": "https://maps.apple.com/?q=Umeda+Sky+Building"
+    },
+    {
+      "date": "30. 7.",
+      "weekday": "Čtvrtek",
+      "city": "Ósaka → Mijadžima",
+      "title": "Od neonů k moři",
+      "theme": "Pohodový přesun a nejkrásnější večer u plovoucí torii.",
+      "hero": "miyajima",
+      "weather": "Letní večer",
+      "mission": "Vrátit se k torii ještě jednou po setmění.",
+      "schedule": [
+        [
+          "08:30",
+          "Snídaně a check-out",
+          "Na Shin-Osaka vyrazit s rezervou."
+        ],
+        [
+          "10:17",
+          "Nozomi Shin-Osaka → Hiroshima",
+          "Potvrzená rezervace."
+        ],
+        [
+          "Po příjezdu",
+          "Hiroshima → Miyajimaguchi",
+          "JR Sanyo Line, bez rezervace."
+        ],
+        [
+          "Poledne",
+          "Oběd u Miyajimaguchi",
+          "Jíst před trajektem, ať je ostrov bez povinností."
+        ],
+        [
+          "14:00 přibližně",
+          "Trajekt na Mijadžimu",
+          "Časté spoje, asi 10 minut."
+        ],
+        [
+          "14:30",
+          "Guest House Mikuniya",
+          "Pěšky s kufry; počítat přibližně 15–20 minut."
+        ],
+        [
+          "Odpoledne",
+          "Omotesando a pobřeží",
+          "Momiji manju, ústřice a pomalá procházka."
+        ],
+        [
+          "19:20",
+          "Západ slunce u torii",
+          "Poté večeře a noční návrat k pobřeží."
+        ]
+      ],
+      "tips": [
+        "Na ostrově se po setmění výrazně ztiší – to je hlavní výhoda přespání.",
+        "Večeři neodkládat příliš pozdě; část podniků zavírá brzy."
+      ],
+      "food": [
+        "Ústřice",
+        "Momiji manju",
+        "Anago"
+      ],
+      "map": "https://maps.apple.com/?q=Mikuniya+Miyajima"
+    },
+    {
+      "date": "31. 7.",
+      "weekday": "Pátek",
+      "city": "Mijadžima → Naošima",
+      "title": "Dva ostrovy, dvě tváře Japonska",
+      "theme": "Klidné ráno, bezpečné návaznosti a příjezd k pláži.",
+      "hero": "islands",
+      "weather": "Podle počasí",
+      "mission": "Rozhodnout se bez výčitek, zda Mount Misen skutečně chcete.",
+      "schedule": [
+        [
+          "Ráno",
+          "Torii, Daisho-in nebo Mount Misen",
+          "Misen jen při dobrém počasí, funkční lanovce a dostatku energie."
+        ],
+        [
+          "11:30–12:00",
+          "Odchod z ostrova",
+          "Vyzvednout kufry a trajekt na Miyajimaguchi."
+        ],
+        [
+          "Poledne",
+          "Miyajimaguchi → Hiroshima",
+          "JR vlak, bez rezervace. Oběd nebo ekiben."
+        ],
+        [
+          "14:14",
+          "Nozomi 162 Hiroshima → Okayama",
+          "Potvrzená rezervace."
+        ],
+        [
+          "Odpoledne",
+          "Okayama → Uno",
+          "Regionální vlak bez rezervace."
+        ],
+        [
+          "Odpoledne",
+          "Uno → Miyanoura",
+          "Vybrat první bezpečně navazující trajekt."
+        ],
+        [
+          "Večer",
+          "Bus nebo taxi → Tsutsuji-so",
+          "Check-in, pláž a jednoduchá večeře."
+        ]
+      ],
+      "tips": [
+        "Mount Misen je bonus, nikoli povinnost.",
+        "Po příjezdu na Naošimu už neplánovat žádné muzeum."
+      ],
+      "food": [
+        "Ekiben",
+        "Jednoduchá večeře u moře"
+      ],
+      "map": "https://maps.apple.com/?q=Seaside+Stay+Tsutsuji-so"
+    },
+    {
+      "date": "1. 8.",
+      "weekday": "Sobota",
+      "city": "Naošima",
+      "title": "Ostrov na elektrokole",
+      "theme": "Objevování, vesnice, venkovní umění, kavárny a koupání.",
+      "hero": "bike",
+      "weather": "Horko · moře",
+      "mission": "Najít nejpodivnější umělecké dílo a nejlepší výhled na moře.",
+      "schedule": [
+        [
+          "Ráno",
+          "Tsutsuji-so → Miyanoura",
+          "Autobus; být u půjčovny před 10:00."
+        ],
+        [
+          "10:00",
+          "Ougiya Rent-a-Cycle",
+          "3× elektrické kolo, platba na místě."
+        ],
+        [
+          "10:15",
+          "Red Pumpkin a Naoshima Pavilion",
+          "První fotky u přístavu."
+        ],
+        [
+          "11:00",
+          "Honmura",
+          "Staré uličky a 2–3 objekty Art House Project."
+        ],
+        [
+          "13:00",
+          "Oběd a kavárna v Honmuře",
+          "Jednoduché kari, ryba nebo sezónní menu."
+        ],
+        [
+          "14:30",
+          "Pobřežní jízda",
+          "Zastávky podle nálady, žádné sportovní tempo."
+        ],
+        [
+          "16:00",
+          "Yellow Pumpkin a Tsutsuji beach",
+          "Koupání, zmrzlina a lenošení."
+        ],
+        [
+          "Podvečer",
+          "Vrácení kol",
+          "Poté autobus zpět nebo podle domluvy půjčovny."
+        ],
+        [
+          "Večer",
+          "Piknik na pláži",
+          "Ovoce, limonáda a západ slunce."
+        ]
+      ],
+      "tips": [
+        "Elektrokola jsou kvůli kopcům a srpnovému vedru správná volba.",
+        "Galerii klidně vynechat, když děti chtějí zůstat ve vodě."
+      ],
+      "food": [
+        "Japonské kari",
+        "Čerstvá ryba",
+        "Zmrzlina",
+        "Plážový piknik"
+      ],
+      "map": "https://maps.apple.com/?q=Ougiya+Rent+a+Cycle+Naoshima"
+    },
+    {
+      "date": "2. 8.",
+      "weekday": "Neděle",
+      "city": "Naošima",
+      "title": "Umění pod zemí a den u moře",
+      "theme": "Jeden silný kulturní zážitek a dlouhé volné odpoledne.",
+      "hero": "chichu",
+      "weather": "Horko · moře",
+      "mission": "Vybrat, která místnost v Chichu působila nejsilněji.",
+      "schedule": [
+        [
+          "Ráno",
+          "Pomalá snídaně",
+          "Žádný budík na úsvit."
+        ],
+        [
+          "10:15",
+          "Přesun k Chichu",
+          "Shuttle nebo pěšky podle vedra."
+        ],
+        [
+          "11:00",
+          "Chichu Art Museum",
+          "Rezervováno; 90–120 minut."
+        ],
+        [
+          "13:00",
+          "Lehký oběd",
+          "Podle dostupnosti v museum area nebo u ubytování."
+        ],
+        [
+          "14:30",
+          "Benesse House / venkovní umění",
+          "Jen pokud budete mít chuť."
+        ],
+        [
+          "Odpoledne",
+          "Tsutsuji beach",
+          "Koupání, knížka, hudba a nicnedělání."
+        ],
+        [
+          "Večer",
+          "Poslední ostrovní západ",
+          "Jednoduchá večeře, sbalit na další den."
+        ]
+      ],
+      "tips": [
+        "Chichu není klasická galerie – hlavním dílem je prostor, světlo a architektura.",
+        "Lee Ufan i další muzeum jsou volitelné; odpočinek je součást plánu."
+      ],
+      "food": [
+        "Lehký oběd",
+        "Káva",
+        "Večeře u moře"
+      ],
+      "map": "https://maps.apple.com/?q=Chichu+Art+Museum"
+    },
+    {
+      "date": "3. 8.",
+      "weekday": "Pondělí",
+      "city": "Naošima → Himeji → Tokio",
+      "title": "Moře, bílý hrad a návrat do Tokia",
+      "theme": "Dřívější trajekt vytvoří klidný blok na Himeji.",
+      "hero": "himeji",
+      "weather": "Horko",
+      "mission": "Vyfotit Himeji z hlavní osy od nádraží.",
+      "schedule": [
+        [
+          "08:30",
+          "Snídaně a check-out",
+          "Autobus nebo taxi do Miyanoury."
+        ],
+        [
+          "09:52",
+          "Trajekt Miyanoura → Uno",
+          "Příjezd 10:12."
+        ],
+        [
+          "Dopoledne",
+          "Uno → Okayama",
+          "Regionální vlak bez rezervace."
+        ],
+        [
+          "Poté",
+          "Okayama → Himeji",
+          "První vhodný rychlý spoj; rezervace není nutná."
+        ],
+        [
+          "Kolem 12:00–12:45",
+          "Himeji Station",
+          "Úschovna kufrů a rychlý oběd."
+        ],
+        [
+          "13:15–15:30",
+          "Himeji Castle",
+          "Hlavní areál a výstup do hradu."
+        ],
+        [
+          "15:35–16:30",
+          "Koko-en Garden",
+          "Klidná zahrada hned vedle hradu."
+        ],
+        [
+          "17:00",
+          "Návrat na nádraží",
+          "Vyzvednout kufry a malá rezerva."
+        ],
+        [
+          "17:59",
+          "Nozomi 46 Himeji → Tokyo",
+          "Potvrzeno, příjezd 20:57."
+        ],
+        [
+          "21:30 přibližně",
+          "Asakusa View Hotel Annex Rokku",
+          "Taxi je po dlouhém dni nejpohodlnější."
+        ]
+      ],
+      "tips": [
+        "Trajekt 9:52 je správná volba – chrání Himeji před zbytečným stresem.",
+        "Po příjezdu do Tokia už nic dalšího neplánovat."
+      ],
+      "food": [
+        "Rychlý oběd v Himeji",
+        "Ekiben do vlaku"
+      ],
+      "map": "https://maps.apple.com/?q=Himeji+Castle"
+    },
+    {
+      "date": "4. 8.",
+      "weekday": "Úterý",
+      "city": "Tokio",
+      "title": "Poslední den: tradice, sushi a Akihabara",
+      "theme": "Osobní ráno pro Jakuba a společné rozloučení s Tokiem.",
+      "hero": "sushi",
+      "weather": "Horko",
+      "mission": "Každý si odveze jednu malou věc jako osobní vzpomínku.",
+      "schedule": [
+        [
+          "05:30–08:30",
+          "Toyosu Market – Jakub",
+          "Horní návštěvnická chodba, ranní ruch a sushi snídaně."
+        ],
+        [
+          "09:30",
+          "Společný start v hotelu",
+          "Děti mohou déle spát."
+        ],
+        [
+          "10:00",
+          "Sensō-ji a Asakusa",
+          "Nakamise i boční uličky."
+        ],
+        [
+          "12:00",
+          "Sushi Edomaru Asakusa",
+          "Rezervace pro 3; požadavek na místa u pultu."
+        ],
+        [
+          "13:30",
+          "Akihabara",
+          "Yodobashi, gachapon, herny a unikátní tokijská atmosféra."
+        ],
+        [
+          "16:30–17:00",
+          "Návrat do hotelu",
+          "Odpočinek, kufry a převlečení."
+        ],
+        [
+          "18:00–19:00",
+          "Lehká poslední večeře",
+          "Poblíž hotelu, pokud budete mít hlad."
+        ],
+        [
+          "20:30",
+          "Odjezd na Hanedu",
+          "Na mezinárodní let v 00:05 s rezervou."
+        ],
+        [
+          "00:05",
+          "Odlet HND",
+          "Konec mise – a začátek vzpomínek."
+        ]
+      ],
+      "tips": [
+        "Toyosu je bonus, ne povinnost; při velké únavě si raději přispat.",
+        "V Akihabaře nic nehledat křečovitě – vstoupit tam, co vás zaujme."
+      ],
+      "food": [
+        "Sushi snídaně",
+        "Sushi Edomaru",
+        "Asakusa street food"
+      ],
+      "map": "https://maps.apple.com/?q=Sushi+Edomaru+Asakusa"
+    }
+  ],
+  "checklist": [
+    [
+      "Doklady",
+      "Pasy všech tří",
+      "Cestovní pojištění",
+      "Letenky a hotelové rezervace offline",
+      "Visit Japan Web / potřebné QR kódy"
+    ],
+    [
+      "Peníze a telefon",
+      "Suica v Apple Wallet",
+      "Platební karty",
+      "Hotovost vybrat po příletu",
+      "eSIM aktivovat",
+      "Powerbanky do příručního zavazadla"
+    ],
+    [
+      "Výbava",
+      "Adaptéry typu A",
+      "Ultralehké pláštěnky / malé deštníky",
+      "Kšiltovky a SPF 50",
+      "Malé rychleschnoucí ručníčky",
+      "Jedno převlečení do příručního zavazadla"
+    ],
+    [
+      "Před odletem",
+      "Stáhnout offline mapy",
+      "Uložit rezervace do jednoho alba/složky",
+      "Zkontrolovat Emirates a přestup v Dubaji",
+      "Zkontrolovat počasí a provoz Mount Misen"
+    ]
+  ]
+}
