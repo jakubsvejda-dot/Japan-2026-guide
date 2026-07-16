@@ -1,12 +1,11 @@
 {
   "name": "Mise tří dobrodruhů – Japonsko 2026",
   "short_name": "Japonsko 2026",
-  "description": "Offline průvodce rodinnou cestou Japonskem.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f0e8",
-  "theme_color": "#a9231d",
+  "background_color": "#f2ede4",
+  "theme_color": "#b83b32",
   "icons": [
     {
       "src": "./assets/icon-192.png",

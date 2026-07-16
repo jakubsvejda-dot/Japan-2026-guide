@@ -1,73 +1,37 @@
 
-const trip = await fetch('./data.json').then(r=>r.json());
-const app=document.querySelector('#app');
-const bottom=[...document.querySelectorAll('.bottom button')];
-const drawer=document.querySelector('#drawer'),scrim=document.querySelector('#scrim');
-
-function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
-function active(view){bottom.forEach(b=>b.classList.toggle('active',b.dataset.view===view))}
-function closeDrawer(){drawer.classList.remove('open');scrim.classList.remove('open');drawer.setAttribute('aria-hidden','true')}
-function bind(){document.querySelectorAll('[data-go]').forEach(x=>x.onclick=()=>go(x.dataset.go))}
-function routeCards(){
- const cities=[...new Map(trip.days.map(d=>[d.city.split(' → ').slice(-1)[0],d])).values()];
- return cities.map((d,i)=>`<div class="route-step"><small>${d.date}</small><b>${esc(d.city)}</b><small>${esc(d.title)}</small></div>`).join('');
-}
+const data=await fetch('./data.json').then(r=>r.json());
+const app=document.querySelector('#app'), nav=[...document.querySelectorAll('.bottom button')];
+const drawer=document.querySelector('#drawer'),shade=document.querySelector('#shade');
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function setActive(v){nav.forEach(b=>b.classList.toggle('active',b.dataset.view===v))}
+function close(){drawer.classList.remove('open');shade.classList.remove('open')}
+function links(){document.querySelectorAll('[data-go]').forEach(x=>x.onclick=()=>go(x.dataset.go))}
 function home(){
- active('home');
- app.innerHTML=`
- <section class="hero"><div class="hero-copy"><span class="pill">${trip.meta.dates}</span><h1>${trip.meta.title}</h1><p>${trip.meta.travellers}<br>${trip.meta.subtitle} · jeden den, jedno téma a dost prostoru Japonsko skutečně zažít.</p><button class="primary" data-go="day-0">Začít cestu</button></div></section>
- <section class="section"><div class="section-head"><div><div class="eyebrow">TRASA</div><h2>17 dní, šest ubytování</h2><div class="sub">Od velkoměsta přes tradici a ostrovy zpět do Tokia.</div></div></div><div class="route">${routeCards()}</div></section>
- <section class="section"><div class="section-head"><div><div class="eyebrow">NEJBLIŽŠÍ ÚKOLY</div><h2>Před odletem</h2></div><button class="ghost" data-go="checklist">Otevřít checklist</button></div>
- <div class="grid">
-  <article class="card"><div class="icon">☂</div><h3>Vedro a déšť</h3><p>Pláštěnka, malý deštník, SPF 50, ručníček a dostatek vody.</p></article>
-  <article class="card"><div class="icon">¥</div><h3>Hotovost</h3><p>Vybrat po příletu; drobné se hodí na chrámy, malé podniky a autobusy.</p></article>
-  <article class="card"><div class="icon">⌁</div><h3>Mount Misen</h3><p>Ověřit provoz lanovky a rozhodnout až podle počasí a energie.</p></article>
- </div></section>
- <section class="section"><div class="section-head"><div><div class="eyebrow">HOTELY</div><h2>Domovy na cestě</h2></div></div><div class="grid">${trip.hotels.map(h=>`<article class="card"><div class="date">${h.dates}</div><h3>${esc(h.city)}</h3><p><b>${esc(h.name)}</b><br>${esc(h.area)}</p></article>`).join('')}</div></section>`;
- bind();
-}
-function days(){
- active('days');
- app.innerHTML=`<section class="section"><div class="section-head"><div><div class="eyebrow">DEN PO DNI</div><h2>Celý itinerář</h2><div class="sub">Klepnutím otevřeš detail, mapu, tipy i časový plán.</div></div></div><div class="grid">${trip.days.map((d,i)=>`<article class="card"><div class="date">${d.date} · ${d.weekday}</div><h3>${esc(d.title)}</h3><p>${esc(d.city)}<br>${esc(d.theme)}</p><div class="tags"><span class="tag">${esc(d.weather)}</span></div><p><button class="ghost" data-go="day-${i}">Detail dne</button></p></article>`).join('')}</div></section>`;bind();
-}
-function illustration(kind){
- return `<img src="./assets/day-${kind}.svg" alt="Ilustrace dne">`;
-}
+setActive('home');app.innerHTML=`<section class="cover"><div class="coverCopy"><div class="kicker">20. 7. – 5. 8. 2026</div><h1>Mise tří dobrodruhů</h1><p>Tokio, hora Fuji, čajový obřad, samurajové, jeleni, ostrovy, moře a sushi připravované přímo před námi. Sedmnáct dní, během kterých se Japonsko několikrát úplně promění.</p><div class="stats"><div class="stat"><b>17</b><small>dní</small></div><div class="stat"><b>7</b><small>kapitol</small></div><div class="stat"><b>4</b><small>Nozomi</small></div><div class="stat"><b>2</b><small>ostrovy</small></div></div><p style="margin-top:22px"><button class="btn" data-go="chapters">Otevřít dobrodružství</button></p></div></section>
+<section class="section"><div class="sectionHead"><div><div class="kicker">NAŠE CESTA</div><h2>Od neonu k moři a zpět</h2><div class="sub">Každá část cesty má úplně jinou náladu.</div></div></div><img class="routeImg" src="./assets/route.svg" alt="Mapa trasy"></section>
+<section class="section"><div class="sectionHead"><div><div class="kicker">CO ZAŽIJEME</div><h2>Tohle nebude obyčejná dovolená</h2></div></div><div class="grid">
+<article class="card"><h3>Velkoměsto</h3><p>Shibuya, digitální teamLab a Akihabara, která vypadá jako kulisa z budoucnosti.</p></article>
+<article class="card"><h3>Tradiční Japonsko</h3><p>Čajový obřad, samurajský workshop, chrámy a tisíce torii.</p></article>
+<article class="card"><h3>Moře a ostrovy</h3><p>Mijadžima při západu slunce a dva pomalé dny na kolech a pláži Naošimy.</p></article>
+</div></section>
+<section class="section"><div class="sectionHead"><div><div class="kicker">KAPITOLY</div><h2>Sedm různých světů</h2></div></div><div class="grid">${data.cities.map(c=>chapterCard(c)).join('')}</div></section>`;links()}
+function chapterCard(c){return `<article class="card chapterCard"><img src="./assets/chapter-${c.id}.svg" alt=""><div class="chapterText"><small>${esc(c.jp)}</small><h3>${esc(c.name)}</h3><p>${esc(c.tag)}</p><button class="btn" data-go="chapter-${c.id}">Otevřít</button></div></article>`}
+function chapters(){setActive('chapters');app.innerHTML=`<section class="section"><div class="sectionHead"><div><div class="kicker">PŘÍBĚH CESTY</div><h2>Kapitoly</h2><div class="sub">Krátké čtení pro Filipa, Nelu i tátu.</div></div></div><div class="grid">${data.cities.map(c=>chapterCard(c)).join('')}</div></section>`;links()}
+function chapter(id){
+setActive('chapters');const c=data.cities.find(x=>x.id===id);const ds=data.days.filter(d=>d.chapter===id || (id==='tokyo2'&&d.chapter==='tokyo2'));
+app.innerHTML=`<section class="chapterHero"><img src="./assets/chapter-${c.id}.svg"><div><div class="kicker">${esc(c.jp)}</div><h1>${esc(c.name)}</h1><p>${esc(c.intro)}</p></div></section>
+<section class="section"><div class="grid"><article class="card wide"><h2>Co nás čeká</h2><div class="tags">${c.highlights.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><p style="margin-top:18px">${esc(c.kids)}</p></article><article class="card"><h3>Ochutnáme</h3><div class="tags">${c.food.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div></article></div></section>
+<section class="section"><div class="sectionHead"><div><div class="kicker">DNY V TÉTO KAPITOLE</div><h2>Konkrétní plán</h2></div></div><article class="card full">${ds.map(d=>`<div class="dayCard"><div class="date">${d.date}</div><div><b>${esc(d.title)}</b><p>${esc(d.story)}</p><button class="btn outline" data-go="day-${data.days.indexOf(d)}">Detail dne</button></div></div>`).join('')}</article></section>`;links()}
+function days(){setActive('days');app.innerHTML=`<section class="section"><div class="sectionHead"><div><div class="kicker">DEN PO DNI</div><h2>Praktický itinerář</h2><div class="sub">Příběh je nahoře, logistika zůstává vždy po ruce.</div></div></div><article class="card full">${data.days.map((d,i)=>`<div class="dayCard"><div class="date">${d.date}</div><div><b>${esc(d.title)}</b><p>${esc(d.city)} · ${esc(d.story)}</p><button class="btn outline" data-go="day-${i}">Otevřít</button></div></div>`).join('')}</article></section>`;links()}
 function day(i){
- active('days'); const d=trip.days[i];
- app.innerHTML=`<section class="day-head"><article class="day-title"><div class="eyebrow">${d.date} · ${d.weekday} · ${esc(d.city)}</div><h1>${esc(d.title)}</h1><p>${esc(d.theme)}</p><div class="tags"><span class="tag">${esc(d.weather)}</span><span class="tag">${d.schedule.length} bodů dne</span></div></article><article class="mission"><div class="eyebrow" style="color:#ffd7d1">MISE DNE</div><p>${esc(d.mission)}</p></article></section>
- <section class="section"><div class="grid"><article class="card wide"><div class="timeline">${d.schedule.map(x=>`<div class="event"><div class="event-time">${esc(x[0])}</div><div class="event-title">${esc(x[1])}</div><div class="event-note">${esc(x[2])}</div></div>`).join('')}</div></article><article class="card tip-card"><h3>Jakubovy tipy</h3>${d.tips.map(t=>`<p>— ${esc(t)}</p>`).join('')}<h3 style="margin-top:22px">Dnes ochutnat</h3><div class="tags">${d.food.map(f=>`<span class="tag">${esc(f)}</span>`).join('')}</div></article></div></section>
- <section class="section"><div class="map-illustration">${illustration(d.hero)}<div class="map-footer"><div><b>Mapa a navigace</b><div class="sub">Otevře hlavní bod dne v Apple Maps.</div></div>${d.map?`<a class="primary" href="${d.map}" target="_blank" rel="noopener">Otevřít mapu ↗</a>`:''}</div></div></section>
- <section class="section"><div class="grid"><article class="card"><h3>Stav dne</h3><div class="check-group"><label><input type="checkbox" data-check="day-${i}-packed"> Věci na den připravené</label><label><input type="checkbox" data-check="day-${i}-done"> Den dokončený</label><label><input type="checkbox" data-check="day-${i}-photo"> Vybraná fotka dne</label></div></article><article class="card wide"><h3>Poznámka k tomuto dni</h3><textarea data-note="day-${i}" placeholder="Co změnit, co si zapamatovat, nejlepší moment…"></textarea></article></div></section>
- <p><button class="ghost" data-go="days">← Zpět na všechny dny</button></p>`;
- bind();restoreLocal();
-}
-function reservations(){
- active('reservations');
- app.innerHTML=`<section class="section"><div class="section-head"><div><div class="eyebrow">POTVRZENO</div><h2>Rezervace a pevné časy</h2><div class="sub">Tohle jsou body, kolem kterých je itinerář postavený.</div></div></div><article class="card full">${trip.reservations.map(r=>`<div class="reservation"><div><b>${r.date}</b><br><small>${r.time}</small></div><div><b>${r.icon} ${esc(r.name)}</b></div><span class="status">${r.status}</span></div>`).join('')}</article></section>`;
-}
-function checklist(){
- active('checklist');
- app.innerHTML=`<section class="section"><div class="section-head"><div><div class="eyebrow">PŘED ODLETEM</div><h2>Jednoduchý checklist</h2><div class="sub">Stav se ukládá jen v tomto telefonu nebo počítači.</div></div></div><div class="grid">${trip.checklist.map((g,gi)=>`<article class="card"><h3>${g[0]}</h3><div class="check-group">${g.slice(1).map((x,ii)=>`<label><input type="checkbox" data-check="list-${gi}-${ii}"> ${esc(x)}</label>`).join('')}</div></article>`).join('')}</div></section>`;restoreLocal();
-}
-function notes(){
- active('notes');
- app.innerHTML=`<section class="section"><div class="section-head"><div><div class="eyebrow">VAŠE VZPOMÍNKY</div><h2>Poznámky a výsledky mise</h2></div></div><div class="grid"><article class="card wide"><h3>Společné poznámky</h3><textarea data-note="global" placeholder="Co ještě zařídit, změnit nebo nezapomenout…"></textarea></article><article class="card"><h3>Po návratu</h3><p>Nejlepší jídlo<br><br>Nejhezčí místo<br><br>Největší překvapení<br><br>Nejlepší společná fotka</p></article></div></section>`;restoreLocal();
-}
-function restoreLocal(){
- document.querySelectorAll('[data-check]').forEach(c=>{c.checked=localStorage.getItem('check:'+c.dataset.check)==='1';c.onchange=()=>localStorage.setItem('check:'+c.dataset.check,c.checked?'1':'0')});
- document.querySelectorAll('[data-note]').forEach(n=>{n.value=localStorage.getItem('note:'+n.dataset.note)||'';n.oninput=()=>localStorage.setItem('note:'+n.dataset.note,n.value)});
-}
-function go(view){
- history.replaceState(null,'','#'+view);window.scrollTo(0,0);closeDrawer();
- if(view==='home')home();else if(view==='days')days();else if(view==='reservations')reservations();else if(view==='checklist')checklist();else if(view==='notes')notes();else if(view.startsWith('day-'))day(Number(view.split('-')[1]));else home();
-}
-bottom.forEach(b=>b.onclick=()=>go(b.dataset.view));
-document.querySelector('#menuBtn').onclick=()=>{drawer.classList.add('open');scrim.classList.add('open');drawer.setAttribute('aria-hidden','false')};
-document.querySelector('#closeBtn').onclick=closeDrawer;scrim.onclick=closeDrawer;
-document.querySelector('#drawerNav').innerHTML=[['home','Domů'],['days','Všechny dny'],['reservations','Rezervace'],['checklist','Checklist'],...trip.days.map((d,i)=>[`day-${i}`,`${d.date} · ${d.title}`])].map(x=>`<button data-drawer="${x[0]}">${esc(x[1])}</button>`).join('');
-document.querySelectorAll('[data-drawer]').forEach(b=>b.onclick=()=>go(b.dataset.drawer));
-const saved=localStorage.getItem('theme');if(saved)document.documentElement.dataset.theme=saved;
-document.querySelector('#themeBtn').onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n)};
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js');
-go(location.hash.slice(1)||'home');
+setActive('days');const d=data.days[i];app.innerHTML=`<section class="chapterHero" style="height:430px"><img src="./assets/chapter-${d.chapter}.svg"><div><div class="kicker">${d.date} · ${esc(d.city)}</div><h1 style="font-size:clamp(42px,7vw,72px)">${esc(d.title)}</h1><p>${esc(d.story)}</p></div></section>
+<section class="section"><div class="grid"><article class="card wide"><div class="timeline">${d.schedule.map(x=>`<div class="event"><div class="time">${esc(x[0])}</div><b>${esc(x[1])}</b><span>${esc(x[2])}</span></div>`).join('')}</div></article><article class="card"><h3>Mise dne</h3>${d.missions.map(x=>`<p>${esc(x)}</p>`).join('')}<h3>Ochutnat</h3><div class="tags">${d.food.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>${d.map?`<p><a class="btn" href="https://maps.apple.com/?q=${encodeURIComponent(d.map)}" target="_blank">Otevřít mapu</a></p>`:''}</article></div></section>
+<section class="section"><div class="grid"><article class="card"><h3>Stav dne</h3><label class="check"><input type="checkbox" data-check="d${i}a"> Připraveno</label><label class="check"><input type="checkbox" data-check="d${i}b"> Splněno</label><label class="check"><input type="checkbox" data-check="d${i}c"> Máme fotku dne</label></article><article class="card wide"><h3>Naše poznámka</h3><textarea data-note="d${i}" placeholder="Nejlepší moment, překvapení, změna plánu…"></textarea></article></div></section>`;restore()}
+function food(){setActive('food');app.innerHTML=`<section class="section"><div class="sectionHead"><div><div class="kicker">JÍDLO</div><h2>Místa, která zapadají do naší trasy</h2><div class="sub">Ne žebříček nejdražších restaurací, ale konkrétní a dosažitelné zážitky.</div></div></div><div class="grid">${data.restaurants.map(r=>`<article class="card foodCard"><div class="city">${esc(r.city)}</div><h3>${esc(r.name)}</h3><p>${esc(r.why)}</p><div class="tags"><span class="tag">${esc(r.order)}</span></div><div class="when">${esc(r.when)}</div><p><a class="btn outline" href="https://maps.apple.com/?q=${encodeURIComponent(r.map)}" target="_blank">Mapa</a></p></article>`).join('')}</div></section>`}
+function practical(){setActive('practical');app.innerHTML=`<section class="section"><div class="sectionHead"><div><div class="kicker">PRAKTICKY</div><h2>Rezervace a poslední kontrola</h2></div></div><div class="grid"><article class="card wide"><h3>Pevné časy</h3>${data.reservations.map(r=>`<div class="res"><b>${r[0]}</b><span>${r[1]}</span><span>${esc(r[2])}</span></div>`).join('')}</article><article class="card"><h3>Před odletem</h3>${["Pasy a pojištění","eSIM","Suica","Adaptéry","Powerbanky","Pláštěnky a malé deštníky","SPF 50 a kšiltovky","Rezervace uložené offline"].map((x,i)=>`<label class="check"><input type="checkbox" data-check="p${i}"> ${x}</label>`).join('')}</article><article class="card full callout"><h3>Pravidlo tří</h3><p>Při každém přesunu: <b>mobil · peněženka/pas · batoh</b>. Nic dalšího není důležitější.</p></article></div></section>`;restore()}
+function restore(){document.querySelectorAll('[data-check]').forEach(x=>{x.checked=localStorage.getItem('c'+x.dataset.check)==='1';x.onchange=()=>localStorage.setItem('c'+x.dataset.check,x.checked?'1':'0')});document.querySelectorAll('[data-note]').forEach(x=>{x.value=localStorage.getItem('n'+x.dataset.note)||'';x.oninput=()=>localStorage.setItem('n'+x.dataset.note,x.value)})}
+function go(v){close();window.scrollTo(0,0);location.hash=v;if(v==='home')home();else if(v==='chapters')chapters();else if(v==='days')days();else if(v==='food')food();else if(v==='practical')practical();else if(v.startsWith('chapter-'))chapter(v.slice(8));else if(v.startsWith('day-'))day(Number(v.slice(4)));else home()}
+nav.forEach(b=>b.onclick=()=>go(b.dataset.view));document.querySelector('#menu').onclick=()=>{drawer.classList.add('open');shade.classList.add('open')};document.querySelector('#close').onclick=close;shade.onclick=close;
+document.querySelector('#drawerNav').innerHTML=[['home','Úvod'],['chapters','Kapitoly'],['days','Den po dni'],['food','Jídlo'],['practical','Prakticky'],...data.cities.map(c=>['chapter-'+c.id,c.name])].map(x=>`<button data-drawer="${x[0]}">${esc(x[1])}</button>`).join('');document.querySelectorAll('[data-drawer]').forEach(b=>b.onclick=()=>go(b.dataset.drawer));
+document.querySelector('#mode').onclick=()=>{const d=document.documentElement.dataset.dark==='1'?'0':'1';document.documentElement.dataset.dark=d;localStorage.setItem('dark',d)};document.documentElement.dataset.dark=localStorage.getItem('dark')||'0';
+if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js');go(location.hash.slice(1)||'home');

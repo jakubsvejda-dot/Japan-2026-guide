@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<rect width="1200" height="700" rx="38" fill="#f7f1e7"/>
+<path d="M165 170 C340 70 410 205 545 175 S760 240 875 330 S1030 500 940 570" fill="none" stroke="#b9aea0" stroke-width="10" stroke-dasharray="18 18" stroke-linecap="round"/>
+<g font-family="sans-serif" text-anchor="middle">
+<g transform="translate(165 170)"><circle r="45" fill="#d74a3f"/><text y="7" font-size="18" fill="#fff">TOKYO</text></g>
+<g transform="translate(410 170)"><circle r="45" fill="#a53d35"/><text y="7" font-size="18" fill="#fff">KYOTO</text></g>
+<g transform="translate(585 205)"><circle r="38" fill="#e27336"/><text y="7" font-size="16" fill="#fff">NARA</text></g>
+<g transform="translate(730 270)"><circle r="45" fill="#e27336"/><text y="7" font-size="18" fill="#fff">OSAKA</text></g>
+<g transform="translate(875 350)"><circle r="45" fill="#b64c3d"/><text y="7" font-size="16" fill="#fff">MIYAJIMA</text></g>
+<g transform="translate(1010 485)"><circle r="45" fill="#318b7b"/><text y="7" font-size="16" fill="#fff">NAOSHIMA</text></g>
+<g transform="translate(940 570)"><circle r="42" fill="#526c87"/><text y="7" font-size="17" fill="#fff">HIMEJI</text></g>
+</g>
+<g font-family="sans-serif" fill="#6f665f" font-size="17"><text x="270" y="105">NOZOMI</text><text x="790" y="220">NOZOMI</text><text x="925" y="420">TRAJEKT + VLAK</text><text x="690" y="610">NOZOMI ZPĚT DO TOKIA</text></g>
+</svg>
