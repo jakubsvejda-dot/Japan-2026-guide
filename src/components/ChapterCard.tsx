@@ -4,11 +4,23 @@ import type { Chapter } from '../data/trip';
 type Props = {
   chapter: Chapter;
   index: number;
+  onOpen?: () => void;
 };
 
-export function ChapterCard({ chapter, index }: Props) {
+export function ChapterCard({ chapter, index, onOpen }: Props) {
+  const className = `chapter-card ${onOpen ? 'is-clickable' : ''}`;
+
   return (
-    <article className="chapter-card" style={{ '--chapter-accent': chapter.accent } as React.CSSProperties}>
+    <article
+      className={className}
+      style={{ '--chapter-accent': chapter.accent } as React.CSSProperties}
+      onClick={onOpen}
+      onKeyDown={(event) => {
+        if (onOpen && (event.key === 'Enter' || event.key === ' ')) onOpen();
+      }}
+      role={onOpen ? 'button' : undefined}
+      tabIndex={onOpen ? 0 : undefined}
+    >
       <div className="chapter-visual" aria-hidden="true">
         <span className="chapter-index">{String(index + 1).padStart(2, '0')}</span>
         <span className="chapter-symbol">{chapter.symbol}</span>
@@ -29,7 +41,8 @@ export function ChapterCard({ chapter, index }: Props) {
           ))}
         </div>
         <span className="chapter-link">
-          Kapitola připravena pro další sprint <ArrowUpRight size={16} />
+          {onOpen ? 'Otevřít detail 22. 7.' : 'Detail připravíme v dalším sprintu'}
+          <ArrowUpRight size={16} />
         </span>
       </div>
     </article>

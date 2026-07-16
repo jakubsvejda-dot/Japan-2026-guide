@@ -1,37 +1,31 @@
-# Mise tří dobrodruhů — nový React základ
+# Mise tří dobrodruhů — redesign, fáze 2
 
-První část nové aplikace:
+Nově je hotový první kompletní detail dne: Tokio 22. 7.
 
-- React + TypeScript + Vite,
-- nový designový systém,
-- kompletně přepracovaná úvodní stránka,
-- responzivní mapa celé cesty,
-- osm kapitol včetně samostatné Fuji,
-- dark mode,
-- GitHub Pages build workflow.
+Obsahuje:
 
-## Bezpečný postup
+- hash navigaci mezi domovskou obrazovkou a detailem dne,
+- responzivní offline schéma dopravy,
+- skutečné stanice, kódy linek a jednotlivé přestupy,
+- praktický rozpis metra krok za krokem,
+- orientační program,
+- tři redakční ilustrace a krátké čtení,
+- viditelné upozornění na možnou kolizi rezervací teamLab / Shibuya Sky.
 
-Doporučeno nahrát nejdřív do samostatné větve `redesign-v3`, aby současná aplikace zůstala živá.
+## Nahrání
 
-## Lokální spuštění
+Obsah ZIPu zkopírujte do stejné lokální větve `redesign-v3`.
+Poté v GitHub Desktop:
 
-```bash
-npm install
-npm run dev
-```
+1. Commit to redesign-v3
+2. Push origin
 
-## Build
-
-```bash
-npm run build
-```
+GitHub Actions projekt sestaví přes Vite.
 
 ## Další sprint
 
-Nový detail dne:
-- skutečná doprava krok za krokem,
-- ověřené schéma trasy,
-- krátké čtení o zastávkách,
-- fotografie/ilustrace,
-- jídlo po trase.
+Po schválení tohoto detailu lze stejnou komponentovou strukturu použít pro:
+- Fuji 23. 7.,
+- Kjóto,
+- meziměstské přesuny,
+- Naošimu a Himeji.
