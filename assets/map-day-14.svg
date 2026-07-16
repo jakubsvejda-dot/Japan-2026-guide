@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 410">
+      <rect width="1100" height="410" rx="34" fill="#f8f3ea"/>
+      <text x="45" y="48" font-family="sans-serif" font-size="16" font-weight="800" letter-spacing="2" fill="#b83b32">OFFLINE MAPA DNE · 3. 8.</text>
+      <path d="M103.0,205 C154.16666666666669,170 154.16666666666669,240 205.33333333333334,205" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M261.33333333333337,205 C312.5,170 312.5,240 363.6666666666667,205" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M419.6666666666667,205 C470.83333333333337,170 470.83333333333337,240 522.0,205" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M578.0,205 C629.1666666666667,170 629.1666666666667,240 680.3333333333334,205" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M736.3333333333334,205 C787.5,170 787.5,240 838.6666666666666,205" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M894.6666666666666,205 C945.8333333333333,170 945.8333333333333,240 997.0,205" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/>
+        <g transform="translate(75.0,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">H</text>
+        </g>
+        <text x="75.0" y="280" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Tsutsuji-so</text>
+        
+        <g transform="translate(233.33333333333334,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">船</text>
+        </g>
+        <text x="233.33333333333334" y="135" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Miyanoura</text>
+        
+        <g transform="translate(391.6666666666667,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">新</text>
+        </g>
+        <text x="391.6666666666667" y="280" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Uno</text>
+        
+        <g transform="translate(550.0,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">新</text>
+        </g>
+        <text x="550.0" y="135" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Okayama</text>
+        
+        <g transform="translate(708.3333333333334,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">城</text>
+        </g>
+        <text x="708.3333333333334" y="280" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Himeji</text>
+        
+        <g transform="translate(866.6666666666666,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">庭</text>
+        </g>
+        <text x="866.6666666666666" y="135" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Koko-en</text>
+        
+        <g transform="translate(1025.0,205)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">新</text>
+        </g>
+        <text x="1025.0" y="280" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Tokio</text>
+        
+    </svg>

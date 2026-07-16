@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 340">
+      <rect width="1100" height="340" rx="34" fill="#f8f3ea"/>
+      <text x="45" y="48" font-family="sans-serif" font-size="16" font-weight="800" letter-spacing="2" fill="#b83b32">OFFLINE MAPA DNE · 2. 8.</text>
+      <path d="M103.0,170 C233.33333333333334,135 233.33333333333334,205 363.6666666666667,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M419.6666666666667,170 C550.0,135 550.0,205 680.3333333333334,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M736.3333333333334,170 C866.6666666666667,135 866.6666666666667,205 997.0,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/>
+        <g transform="translate(75.0,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">H</text>
+        </g>
+        <text x="75.0" y="245" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Tsutsuji-so</text>
+        
+        <g transform="translate(391.6666666666667,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">A</text>
+        </g>
+        <text x="391.6666666666667" y="100" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Chichu</text>
+        
+        <g transform="translate(708.3333333333334,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">A</text>
+        </g>
+        <text x="708.3333333333334" y="245" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Benesse</text>
+        
+        <g transform="translate(1025.0,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">海</text>
+        </g>
+        <text x="1025.0" y="100" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Pláž</text>
+        
+    </svg>

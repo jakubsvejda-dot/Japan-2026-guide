@@ -172,7 +172,21 @@
         "Lehké jídlo",
         "Hodně vody"
       ],
-      "map": null
+      "map": null,
+      "stops": [
+        {
+          "name": "Praha",
+          "icon": "flight"
+        },
+        {
+          "name": "Dubaj",
+          "icon": "plane"
+        },
+        {
+          "name": "Tokio",
+          "icon": "hotel"
+        }
+      ]
     },
     {
       "date": "21. 7.",
@@ -200,7 +214,21 @@
         "Japonský pudink",
         "Limonáda"
       ],
-      "map": "Toshi Center Hotel Tokyo"
+      "map": "Toshi Center Hotel Tokyo",
+      "stops": [
+        {
+          "name": "Narita",
+          "icon": "plane"
+        },
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        },
+        {
+          "name": "Konbini",
+          "icon": "store"
+        }
+      ]
     },
     {
       "date": "22. 7.",
@@ -238,7 +266,29 @@
         "Matcha",
         "Ramen"
       ],
-      "map": "teamLab Planets Tokyo"
+      "map": "teamLab Planets Tokyo",
+      "stops": [
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        },
+        {
+          "name": "Meiji Jingu",
+          "icon": "torii"
+        },
+        {
+          "name": "Harajuku",
+          "icon": "walk"
+        },
+        {
+          "name": "teamLab",
+          "icon": "art"
+        },
+        {
+          "name": "Shibuya Sky",
+          "icon": "view"
+        }
+      ]
     },
     {
       "date": "23. 7.",
@@ -276,7 +326,29 @@
         "Zmrzlina",
         "Ekiben"
       ],
-      "map": "Chureito Pagoda"
+      "map": "Chureito Pagoda",
+      "stops": [
+        {
+          "name": "Tokyo Station",
+          "icon": "train"
+        },
+        {
+          "name": "Kawaguchiko",
+          "icon": "lake"
+        },
+        {
+          "name": "Iyashi village",
+          "icon": "village"
+        },
+        {
+          "name": "Oshino",
+          "icon": "water"
+        },
+        {
+          "name": "Chureito",
+          "icon": "view"
+        }
+      ]
     },
     {
       "date": "24. 7.",
@@ -314,7 +386,33 @@
         "Nishiki snacky",
         "Izakaya"
       ],
-      "map": "Nishiki Market Kyoto"
+      "map": "Nishiki Market Kyoto",
+      "stops": [
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        },
+        {
+          "name": "Tokyo Station",
+          "icon": "train"
+        },
+        {
+          "name": "Kyoto Station",
+          "icon": "train"
+        },
+        {
+          "name": "Kabin",
+          "icon": "hotel"
+        },
+        {
+          "name": "Nishiki",
+          "icon": "food"
+        },
+        {
+          "name": "Gion",
+          "icon": "walk"
+        }
+      ]
     },
     {
       "date": "25. 7.",
@@ -358,7 +456,33 @@
         "Soba",
         "Yudofu"
       ],
-      "map": "Kiyomizu-dera"
+      "map": "Kiyomizu-dera",
+      "stops": [
+        {
+          "name": "Kabin",
+          "icon": "hotel"
+        },
+        {
+          "name": "Kiyomizu",
+          "icon": "temple"
+        },
+        {
+          "name": "Sannenzaka",
+          "icon": "walk"
+        },
+        {
+          "name": "Čaj",
+          "icon": "tea"
+        },
+        {
+          "name": "Kodai-ji",
+          "icon": "temple"
+        },
+        {
+          "name": "Gion",
+          "icon": "walk"
+        }
+      ]
     },
     {
       "date": "26. 7.",
@@ -396,7 +520,29 @@
         "Udon",
         "Lehká večeře"
       ],
-      "map": "Arashiyama Bamboo Forest"
+      "map": "Arashiyama Bamboo Forest",
+      "stops": [
+        {
+          "name": "Kabin",
+          "icon": "hotel"
+        },
+        {
+          "name": "Arashiyama",
+          "icon": "bamboo"
+        },
+        {
+          "name": "Okochi Sanso",
+          "icon": "garden"
+        },
+        {
+          "name": "Workshop",
+          "icon": "samurai"
+        },
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        }
+      ]
     },
     {
       "date": "27. 7.",
@@ -439,7 +585,33 @@
         "Wagyu špíz",
         "Mořské plody"
       ],
-      "map": "Dotonbori Osaka"
+      "map": "Dotonbori Osaka",
+      "stops": [
+        {
+          "name": "Kabin",
+          "icon": "hotel"
+        },
+        {
+          "name": "Fushimi Inari",
+          "icon": "torii"
+        },
+        {
+          "name": "Osaka",
+          "icon": "train"
+        },
+        {
+          "name": "Kuromon",
+          "icon": "food"
+        },
+        {
+          "name": "Den Den",
+          "icon": "game"
+        },
+        {
+          "name": "Dotonbori",
+          "icon": "neon"
+        }
+      ]
     },
     {
       "date": "28. 7.",
@@ -482,7 +654,29 @@
         "Mochi",
         "Udon"
       ],
-      "map": "Todai-ji Nara"
+      "map": "Todai-ji Nara",
+      "stops": [
+        {
+          "name": "Osaka",
+          "icon": "hotel"
+        },
+        {
+          "name": "Kintetsu Nara",
+          "icon": "train"
+        },
+        {
+          "name": "Nara Park",
+          "icon": "deer"
+        },
+        {
+          "name": "Todai-ji",
+          "icon": "temple"
+        },
+        {
+          "name": "Nakatanidou",
+          "icon": "food"
+        }
+      ]
     },
     {
       "date": "29. 7.",
@@ -525,7 +719,29 @@
         "Kushikatsu",
         "Rikuro cheesecake"
       ],
-      "map": "Umeda Sky Building"
+      "map": "Umeda Sky Building",
+      "stops": [
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        },
+        {
+          "name": "Osaka Castle",
+          "icon": "castle"
+        },
+        {
+          "name": "Herna",
+          "icon": "game"
+        },
+        {
+          "name": "Amerikamura",
+          "icon": "walk"
+        },
+        {
+          "name": "Umeda Sky",
+          "icon": "view"
+        }
+      ]
     },
     {
       "date": "30. 7.",
@@ -563,7 +779,33 @@
         "Anago",
         "Momiji manju"
       ],
-      "map": "Itsukushima Shrine"
+      "map": "Itsukushima Shrine",
+      "stops": [
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        },
+        {
+          "name": "Shin-Osaka",
+          "icon": "train"
+        },
+        {
+          "name": "Hiroshima",
+          "icon": "train"
+        },
+        {
+          "name": "Miyajimaguchi",
+          "icon": "ferry"
+        },
+        {
+          "name": "Mikuniya",
+          "icon": "hotel"
+        },
+        {
+          "name": "Torii",
+          "icon": "torii"
+        }
+      ]
     },
     {
       "date": "31. 7.",
@@ -600,7 +842,33 @@
         "Ekiben",
         "Jednoduchá večeře u moře"
       ],
-      "map": "Seaside Stay Tsutsuji-so"
+      "map": "Seaside Stay Tsutsuji-so",
+      "stops": [
+        {
+          "name": "Mikuniya",
+          "icon": "hotel"
+        },
+        {
+          "name": "Daisho-in / Misen",
+          "icon": "temple"
+        },
+        {
+          "name": "Hiroshima",
+          "icon": "train"
+        },
+        {
+          "name": "Okayama",
+          "icon": "train"
+        },
+        {
+          "name": "Uno",
+          "icon": "ferry"
+        },
+        {
+          "name": "Tsutsuji-so",
+          "icon": "hotel"
+        }
+      ]
     },
     {
       "date": "1. 8.",
@@ -648,7 +916,33 @@
         "Zmrzlina",
         "Piknik"
       ],
-      "map": "Red Pumpkin Naoshima"
+      "map": "Red Pumpkin Naoshima",
+      "stops": [
+        {
+          "name": "Tsutsuji-so",
+          "icon": "hotel"
+        },
+        {
+          "name": "Miyanoura",
+          "icon": "bike"
+        },
+        {
+          "name": "Red Pumpkin",
+          "icon": "art"
+        },
+        {
+          "name": "Honmura",
+          "icon": "village"
+        },
+        {
+          "name": "Yellow Pumpkin",
+          "icon": "art"
+        },
+        {
+          "name": "Pláž",
+          "icon": "beach"
+        }
+      ]
     },
     {
       "date": "2. 8.",
@@ -686,7 +980,25 @@
         "Káva",
         "Večeře u moře"
       ],
-      "map": "Chichu Art Museum"
+      "map": "Chichu Art Museum",
+      "stops": [
+        {
+          "name": "Tsutsuji-so",
+          "icon": "hotel"
+        },
+        {
+          "name": "Chichu",
+          "icon": "art"
+        },
+        {
+          "name": "Benesse",
+          "icon": "art"
+        },
+        {
+          "name": "Pláž",
+          "icon": "beach"
+        }
+      ]
     },
     {
       "date": "3. 8.",
@@ -733,7 +1045,37 @@
         "Rychlý oběd",
         "Ekiben"
       ],
-      "map": "Himeji Castle"
+      "map": "Himeji Castle",
+      "stops": [
+        {
+          "name": "Tsutsuji-so",
+          "icon": "hotel"
+        },
+        {
+          "name": "Miyanoura",
+          "icon": "ferry"
+        },
+        {
+          "name": "Uno",
+          "icon": "train"
+        },
+        {
+          "name": "Okayama",
+          "icon": "train"
+        },
+        {
+          "name": "Himeji",
+          "icon": "castle"
+        },
+        {
+          "name": "Koko-en",
+          "icon": "garden"
+        },
+        {
+          "name": "Tokio",
+          "icon": "train"
+        }
+      ]
     },
     {
       "date": "4. 8.",
@@ -781,65 +1123,200 @@
         "Edomae sushi",
         "Asakusa snack"
       ],
-      "map": "Sushi Edomaru Asakusa"
+      "map": "Sushi Edomaru Asakusa",
+      "stops": [
+        {
+          "name": "Hotel",
+          "icon": "hotel"
+        },
+        {
+          "name": "Toyosu",
+          "icon": "fish"
+        },
+        {
+          "name": "Sensō-ji",
+          "icon": "temple"
+        },
+        {
+          "name": "Edomaru",
+          "icon": "sushi"
+        },
+        {
+          "name": "Akihabara",
+          "icon": "game"
+        },
+        {
+          "name": "Haneda",
+          "icon": "plane"
+        }
+      ]
     }
   ],
   "restaurants": [
     {
+      "date": "21. 7.",
       "city": "Tokio",
-      "name": "Sushi Edomaru Asakusa",
-      "why": "Společný závěrečný oběd u sushi baru. Vidíte přípravu a každý si může vybrat podle chuti.",
-      "order": "Nigiri set, tuňák, krevety, tamago",
-      "when": "4. 8. · 12:00 · rezervováno",
-      "map": "Sushi Edomaru Asakusa"
+      "name": "První konbini",
+      "type": "Konbini ochutnávka",
+      "why": "Nejjednodušší první kontakt s japonským jídlem po příletu.",
+      "order": "Onigiri, pudink, studený čaj",
+      "when": "Večer po check‑inu",
+      "map": "Toshi Center Hotel Tokyo",
+      "art": "konbini"
     },
     {
-      "city": "Toyosu",
-      "name": "Sushi Dai / alternativní tržní sushi",
-      "why": "Ranní zážitek přímo u trhu; malý pult, čerstvé ryby a rychlý kontakt se sushi řemeslem.",
-      "order": "Chef’s selection / omakase podle nabídky",
-      "when": "4. 8. brzy ráno · bez pevné rezervace",
-      "map": "Sushi Dai Toyosu"
+      "date": "22. 7.",
+      "city": "Tokio",
+      "name": "Harajuku nebo Shibuya",
+      "type": "Lehký oběd + sladkost",
+      "why": "Mezi Meiji Jingu a teamLabem potřebujeme rychlé, klimatizované a nenáročné jídlo.",
+      "order": "Ramen nebo donburi, případně fluffy pancake",
+      "when": "Pozdní dopoledne",
+      "map": "Harajuku Station",
+      "art": "pancake"
     },
     {
+      "date": "24. 7.",
+      "city": "Shinkansen",
+      "name": "Ekiben z Tokyo Station",
+      "type": "Jídlo do vlaku",
+      "why": "Součást první jízdy Shinkansenem, ne jen praktická krabička.",
+      "order": "Vybrat očima: ryba, maso nebo regionální mix",
+      "when": "Před odjezdem Nozomi v 11:00",
+      "map": "Tokyo Station",
+      "art": "bento"
+    },
+    {
+      "date": "24. 7.",
       "city": "Kjóto",
       "name": "Nishiki Market",
-      "why": "Ne jedna restaurace, ale několik malých ochutnávek na jednom místě.",
-      "order": "Tamago, mořské plody, pickles, matcha sladkost",
-      "when": "24. 7. odpoledne",
-      "map": "Nishiki Market Kyoto"
+      "type": "Ochutnávková procházka",
+      "why": "Místo jedné restaurace několik malých chutí v historickém centru.",
+      "order": "Tamago, pickles, grilovaná ryba, matcha",
+      "when": "Odpoledne po příjezdu",
+      "map": "Nishiki Market Kyoto",
+      "art": "market"
     },
     {
-      "city": "Nara",
-      "name": "Mizuya Chaya / lehký oběd v parku",
-      "why": "Atmosférické, jednoduché a po cestě mezi hlavními místy.",
-      "order": "Udon nebo soba",
-      "when": "28. 7. kolem 13:00",
-      "map": "Mizuya Chaya Nara"
+      "date": "25. 7.",
+      "city": "Kjóto",
+      "name": "Oběd po čajovém obřadu",
+      "type": "Lehká kjótská kuchyně",
+      "why": "Po matcha a sladkosti dává smysl teplé, jednoduché jídlo.",
+      "order": "Soba, udon nebo yudofu",
+      "when": "Kolem 13:40",
+      "map": "Kodai-ji Kyoto",
+      "art": "soba"
     },
     {
+      "date": "27. 7.",
       "city": "Ósaka",
       "name": "Kuromon Market",
-      "why": "Nejlepší způsob, jak ochutnat více věcí bez formální restaurace.",
-      "order": "Wagyu špíz, mušle, tuňák, mochi",
-      "when": "27. 7. pozdní oběd",
-      "map": "Kuromon Market Osaka"
+      "type": "Street food",
+      "why": "Každý může ochutnat něco jiného a sdílet malé porce.",
+      "order": "Wagyu špíz, tuňák, mušle, mochi",
+      "when": "Pozdní oběd",
+      "map": "Kuromon Market Osaka",
+      "art": "takoyaki"
     },
     {
+      "date": "27. 7.",
+      "city": "Ósaka",
+      "name": "Dotonbori",
+      "type": "Večerní Ósaka",
+      "why": "Neony a jídlo k sobě patří; není třeba vybírat podnik předem.",
+      "order": "Takoyaki nebo okonomiyaki",
+      "when": "Večer",
+      "map": "Dotonbori Osaka",
+      "art": "okonomiyaki"
+    },
+    {
+      "date": "28. 7.",
+      "city": "Nara",
+      "name": "Mizuya Chaya / park",
+      "type": "Oběd v Naře",
+      "why": "Atmosférické a po cestě mezi parkem a chrámy.",
+      "order": "Udon nebo soba",
+      "when": "Kolem 13:00",
+      "map": "Mizuya Chaya Nara",
+      "art": "udon"
+    },
+    {
+      "date": "28. 7.",
+      "city": "Nara",
+      "name": "Nakatanidou",
+      "type": "Čerstvé mochi",
+      "why": "Krátká, zábavná zastávka; výroba bývá skoro stejně zajímavá jako chuť.",
+      "order": "Yomogi mochi",
+      "when": "Odpoledne",
+      "map": "Nakatanidou Nara",
+      "art": "mochi"
+    },
+    {
+      "date": "29. 7.",
+      "city": "Ósaka",
+      "name": "Okonomiyaki nebo kushikatsu",
+      "type": "Poslední velká večeře v Ósace",
+      "why": "Dvě typická jídla, která nejlépe vystihují uvolněnou Ósaku.",
+      "order": "Okonomiyaki ke sdílení / kushikatsu mix",
+      "when": "Večer",
+      "map": "Namba Osaka",
+      "art": "okonomiyaki"
+    },
+    {
+      "date": "30. 7.",
       "city": "Mijadžima",
-      "name": "Omotesando area",
-      "why": "Ústřice, anago a momiji manju jsou součást zážitku z ostrova.",
-      "order": "Grilované ústřice + anago",
-      "when": "30. 7. odpoledne/večer",
-      "map": "Miyajima Omotesando"
+      "name": "Omotesando",
+      "type": "Ostrovní speciality",
+      "why": "Ústřice a anago patří k Mijadžimě stejně jako torii.",
+      "order": "Grilované ústřice, anago, momiji manju",
+      "when": "Odpoledne nebo brzký večer",
+      "map": "Miyajima Omotesando",
+      "art": "oyster"
     },
     {
+      "date": "1. 8.",
       "city": "Naošima",
       "name": "Honmura cafés",
-      "why": "Malé podniky ve starých domech; nabídka se mění, proto vybírat podle nálady a otevřených dveří.",
+      "type": "Ostrovní oběd",
+      "why": "Malé podniky ve starých domech; vybereme podle otevřených dveří a nálady.",
       "order": "Japonské kari nebo ryba dne",
-      "when": "1. 8. oběd",
-      "map": "Honmura Naoshima"
+      "when": "Kolem 13:00",
+      "map": "Honmura Naoshima",
+      "art": "curry"
+    },
+    {
+      "date": "1. 8.",
+      "city": "Naošima",
+      "name": "Piknik na pláži",
+      "type": "Západ slunce",
+      "why": "Jednoduchý večer u moře může být silnější než formální restaurace.",
+      "order": "Ovoce, limonáda, snacky",
+      "when": "Večer",
+      "map": "Tsutsuji-so Naoshima",
+      "art": "picnic"
+    },
+    {
+      "date": "4. 8.",
+      "city": "Toyosu",
+      "name": "Sushi Dai / tržní sushi",
+      "type": "Sushi snídaně pro Jakuba",
+      "why": "Ranní ruch trhu a malý sushi pult.",
+      "order": "Chef’s selection podle nabídky",
+      "when": "Brzy ráno",
+      "map": "Sushi Dai Toyosu",
+      "art": "sushi"
+    },
+    {
+      "date": "4. 8.",
+      "city": "Asakusa",
+      "name": "Sushi Edomaru",
+      "type": "Společné Edomae sushi",
+      "why": "Sushi připravované před námi, ale bez přísného dlouhého omakase.",
+      "order": "Nigiri set, tuňák, krevety, tamago",
+      "when": "12:00 · rezervováno",
+      "map": "Sushi Edomaru Asakusa",
+      "art": "nigiri"
     }
   ],
   "reservations": [
@@ -903,5 +1380,70 @@
       "12:00",
       "Sushi Edomaru Asakusa"
     ]
+  ],
+  "glossary": [
+    {
+      "term": "Konbini",
+      "jp": "コンビニ",
+      "short": "Japonský nonstop obchod s jídlem a službami.",
+      "long": "Malý obchod typu 7‑Eleven, FamilyMart nebo Lawson. Kromě pití a svačin nabízí teplá jídla, bankomat, toaletu, kopírování i vyzvednutí zásilek.",
+      "icon": "store"
+    },
+    {
+      "term": "Onigiri",
+      "jp": "おにぎり",
+      "short": "Rýžový trojúhelník s náplní.",
+      "long": "Praktická svačina zabalená v řase nori. Často s tuňákem, lososem, švestkou umeboši nebo krevetou.",
+      "icon": "onigiri"
+    },
+    {
+      "term": "Ekiben",
+      "jp": "駅弁",
+      "short": "Obědová krabička z nádraží.",
+      "long": "Bento prodávané na nádražích a určené do vlaku. Každý region má vlastní speciality a obal bývá součástí zážitku.",
+      "icon": "bento"
+    },
+    {
+      "term": "Edomae sushi",
+      "jp": "江戸前寿司",
+      "short": "Tradiční tokijský styl sushi.",
+      "long": "Ryba nebývá jen syrová. Mistr ji může marinovat, lehce opálit, spařit nebo potřít omáčkou tak, aby byla připravená k okamžitému snědení bez další sójové omáčky.",
+      "icon": "sushi"
+    },
+    {
+      "term": "Omakase",
+      "jp": "おまかせ",
+      "short": "Výběr necháváte na kuchaři.",
+      "long": "Host neobjednává jednotlivé kusy. Šéfkuchař servíruje postupně to, co považuje ten den za nejlepší.",
+      "icon": "chef"
+    },
+    {
+      "term": "Gachapon",
+      "jp": "ガチャポン",
+      "short": "Automaty s překvapeními v kapslích.",
+      "long": "Za několik set jenů otočíte klikou a vypadne náhodná figurka nebo drobnost. V Akihabaře jich uvidíte celé stěny.",
+      "icon": "capsule"
+    },
+    {
+      "term": "Torii",
+      "jp": "鳥居",
+      "short": "Brána označující vstup do posvátného prostoru.",
+      "long": "Nejčastěji stojí před šintoistickou svatyní. Na Fushimi Inari jich projdete tisíce, na Mijadžimě jedna slavná stojí v moři.",
+      "icon": "torii"
+    },
+    {
+      "term": "Matcha",
+      "jp": "抹茶",
+      "short": "Jemně mletý zelený čaj.",
+      "long": "Při čajovém obřadu se prášek vyšlehá bambusovou metličkou. Chuť je výrazná a lehce hořká, proto se podává se sladkým wagashi.",
+      "icon": "tea"
+    },
+    {
+      "term": "Japonský pudink",
+      "jp": "プリン",
+      "short": "Jemný karamelový custard.",
+      "long": "Vypadá jako flan nebo crème caramel. V konbini bývá chlazený v kelímku a je to jeden z nejjednodušších prvních dezertů k ochutnání.",
+      "icon": "pudding"
+    }
   ]
 }

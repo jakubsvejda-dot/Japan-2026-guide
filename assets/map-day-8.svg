@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 340">
+      <rect width="1100" height="340" rx="34" fill="#f8f3ea"/>
+      <text x="45" y="48" font-family="sans-serif" font-size="16" font-weight="800" letter-spacing="2" fill="#b83b32">OFFLINE MAPA DNE · 28. 7.</text>
+      <path d="M103.0,170 C193.75,135 193.75,205 284.5,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M340.5,170 C431.25,135 431.25,205 522.0,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M578.0,170 C668.75,135 668.75,205 759.5,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/><path d="M815.5,170 C906.25,135 906.25,205 997.0,170" fill="none" stroke="#b6aa9d" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 12"/>
+        <g transform="translate(75.0,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">H</text>
+        </g>
+        <text x="75.0" y="245" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Osaka</text>
+        
+        <g transform="translate(312.5,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">新</text>
+        </g>
+        <text x="312.5" y="100" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Kintetsu Nara</text>
+        
+        <g transform="translate(550.0,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">鹿</text>
+        </g>
+        <text x="550.0" y="245" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Nara Park</text>
+        
+        <g transform="translate(787.5,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">寺</text>
+        </g>
+        <text x="787.5" y="100" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Todai-ji</text>
+        
+        <g transform="translate(1025.0,170)">
+          <circle r="32" fill="#b83b32"/>
+          <text y="8" text-anchor="middle" font-family="sans-serif" font-size="20" fill="white">食</text>
+        </g>
+        <text x="1025.0" y="245" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#312b26">Nakatanidou</text>
+        
+    </svg>

@@ -1,18 +1,22 @@
-# Mise tří dobrodruhů — Japonsko 2026, v1.0
+# Mise tří dobrodruhů — Japonsko 2026, v1.1
 
-Přepracovaná PWA: stručná interaktivní kniha pro Filipa a Nelu a praktický průvodce pro cestu.
+## Co se změnilo
 
-## Novinky v1.0
-- nový úvodní příběh a souhrn celé cesty,
-- sedm vizuálních kapitol,
-- vlastní mapa trasy,
-- krátké texty o tom, co každé místo znamená,
-- praktické detaily každého dne,
-- konkrétní doporučení na jídlo,
-- rezervace a checklist,
-- offline režim, dark mode a poznámky.
+- výrazně lepší responsivní rozložení pro iPhone,
+- úvodní mapa se na mobilu posouvá vodorovně a zůstává čitelná,
+- celé karty kapitol jsou klikací; informační štítky mají jiný tvar než tlačítka,
+- každý den má vlastní schematickou offline mapu,
+- japonské pojmy mají vysvětlivky a samostatný slovníček,
+- sekce Jídlo je řazená chronologicky a obsahuje offline ilustrace i umístění na trase,
+- service worker používá novou cache `1.1.0`, takže se aktualizace rychleji projeví.
 
-## Aktualizace existujícího GitHubu
-Rozbalte ZIP a nahraďte obsah lokálního repozitáře. Složku `.git` nemažte.
-V GitHub Desktop: Commit to main → Push origin.
+## Aktualizace GitHubu
+
+Obsah ZIPu zkopírujte do lokální složky repozitáře a nahraďte staré soubory.
+Složku `.git` nemažte.
+
+V GitHub Desktop:
+1. Commit to main
+2. Push origin
+
 GitHub Pages zůstane na stejné adrese.
