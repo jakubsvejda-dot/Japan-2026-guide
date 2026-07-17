@@ -41,7 +41,7 @@ export function ChapterCard({ chapter, index, onOpen }: Props) {
           ))}
         </div>
         <span className="chapter-link">
-          {onOpen ? 'Otevřít detail 22. 7.' : 'Detail připravíme v dalším sprintu'}
+          {onOpen ? 'Otevřít itinerář' : 'Detail připravíme v dalším sprintu'}
           <ArrowUpRight size={16} />
         </span>
       </div>

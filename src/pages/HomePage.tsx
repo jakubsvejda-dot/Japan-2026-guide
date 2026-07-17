@@ -4,10 +4,12 @@ import { ChapterCard } from '../components/ChapterCard';
 import { chapters } from '../data/trip';
 
 type Props = {
-  onOpenTokyoDay: () => void;
+  onOpenDay: (id: string) => void;
 };
 
-export function HomePage({ onOpenTokyoDay }: Props) {
+const chapterDays: Record<string, string> = { tokyo: 'tokyo-21', fuji: 'fuji-23', kyoto: 'kyoto-24', osaka: 'osaka-27', miyajima: 'miyajima-30', naoshima: 'naoshima-31', himeji: 'himeji-03', 'tokyo-final': 'tokyo-04' };
+
+export function HomePage({ onOpenDay }: Props) {
   return (
     <>
       <Hero />
@@ -31,7 +33,7 @@ export function HomePage({ onOpenTokyoDay }: Props) {
               chapter={chapter}
               index={index}
               key={chapter.id}
-              onOpen={chapter.id === 'tokyo' ? onOpenTokyoDay : undefined}
+              onOpen={() => onOpenDay(chapterDays[chapter.id])}
             />
           ))}
         </div>
@@ -40,12 +42,9 @@ export function HomePage({ onOpenTokyoDay }: Props) {
       <section className="product-note">
         <span className="eyebrow">FÁZE 2</span>
         <h2>První kompletní detail dne</h2>
-        <p>
-          Tokio 22. 7. obsahuje offline dopravní schéma, přestupy krok za krokem,
-          orientační program a krátké čtení ke všem hlavním zastávkám.
-        </p>
-        <button className="text-action" onClick={onOpenTokyoDay}>
-          Otevřít Tokio 22. 7. →
+        <p>Každá kapitola vede k aktuálnímu dennímu programu s potvrzenými rezervacemi, doporučenou logistikou a otevřenými položkami.</p>
+        <button className="text-action" onClick={() => onOpenDay('tokyo-21')}>
+          Otevřít itinerář →
         </button>
       </section>
     </>

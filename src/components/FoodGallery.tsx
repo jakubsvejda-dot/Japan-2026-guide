@@ -16,8 +16,8 @@ export function FoodGallery({ items }: Props) {
         <article className="food-card" key={item.id}>
           <div className="food-card-visual">
             <img src={item.illustration} alt="" />
-            <span className={`food-priority ${item.priority}`}>
-              <Sparkles size={13} /> {priorityLabel[item.priority]}
+            <span className={`food-priority ${item.status?.toLowerCase() ?? item.priority}`}>
+              <Sparkles size={13} /> {item.status ?? priorityLabel[item.priority]}
             </span>
           </div>
           <div className="food-card-copy">

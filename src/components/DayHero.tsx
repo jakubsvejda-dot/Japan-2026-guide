@@ -1,10 +1,12 @@
 import { ArrowLeft, CloudRain, MapPin } from 'lucide-react';
+import type { DayGuide } from '../data/dayTypes';
 
 type Props = {
   onBack: () => void;
+  guide: DayGuide;
 };
 
-export function DayHero({ onBack }: Props) {
+export function DayHero({ onBack, guide }: Props) {
   return (
     <section className="day-hero">
       <button className="back-button" onClick={onBack}>
@@ -19,15 +21,12 @@ export function DayHero({ onBack }: Props) {
       </div>
 
       <div className="day-hero-copy">
-        <span className="eyebrow light">22. 7. 2026 · STŘEDA · TOKIO</span>
-        <h1>Od lesního ticha<br />k moři světel</h1>
-        <p>
-          Meiji Jingu, Harajuku, teamLab Planets a Shibuya Sky.
-          Jeden den, během kterého se Tokio třikrát úplně promění.
-        </p>
+        <span className="eyebrow light">{guide.date} · {guide.weekday.toUpperCase()} · {guide.city.toUpperCase()}</span>
+        <h1>{guide.title}</h1>
+        <p>{guide.intro}</p>
         <div className="day-facts">
-          <span><MapPin size={16} /> 4 hlavní zastávky</span>
-          <span><CloudRain size={16} /> horko a možné přeháňky</span>
+          <span><MapPin size={16} /> {guide.theme}</span>
+          <span><CloudRain size={16} /> {guide.weatherNote}</span>
         </div>
       </div>
     </section>

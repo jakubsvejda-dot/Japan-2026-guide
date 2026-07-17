@@ -1,4 +1,4 @@
-export type TransitMode = 'walk' | 'metro' | 'yurikamome' | 'train' | 'bus' | 'taxi' | 'ferry';
+export type TransitMode = 'walk' | 'metro' | 'yurikamome' | 'train' | 'bus' | 'taxi' | 'ferry' | 'bike';
 
 export type TransitLeg = {
   mode: TransitMode;
@@ -10,6 +10,15 @@ export type TransitLeg = {
   lineCode?: string;
   lineColor?: string;
   duration: string;
+  status?: ItemStatus;
+};
+
+export type ItemStatus = 'CONFIRMED' | 'AGREED' | 'RECOMMENDED' | 'OPTIONAL' | 'RECHECK' | 'OPEN';
+
+export type ItineraryItem = {
+  title: string;
+  detail: string;
+  status: ItemStatus;
 };
 
 export type PlaceStory = {
@@ -33,6 +42,7 @@ export type FoodTip = {
   moment: string;
   illustration: string;
   priority: 'must' | 'nice' | 'curious';
+  status?: ItemStatus;
 };
 
 export type DayGuide = {
@@ -41,13 +51,19 @@ export type DayGuide = {
   weekday: string;
   city: string;
   title: string;
+  theme: string;
+  status: ItemStatus;
   intro: string;
   weatherNote: string;
   reservationWarning?: string;
-  schedule: { time: string; title: string; note: string }[];
+  schedule: ({ time: string; title: string; note: string; status?: ItemStatus } | ItineraryItem)[];
   transit: TransitLeg[];
   places: PlaceStory[];
   food: FoodTip[];
   japanToday: { title: string; text: string }[];
   packing: string[];
+  reservations: ItineraryItem[];
+  practicalTips: ItineraryItem[];
+  weatherAlternative?: ItineraryItem;
+  importantNotes: ItineraryItem[];
 };

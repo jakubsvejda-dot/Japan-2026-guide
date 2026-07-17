@@ -24,7 +24,7 @@ export function TransitSteps({ legs }: Props) {
           </div>
           <div className="transit-step-copy">
             <div className="transit-step-topline">
-              <span>{leg.label}</span>
+              <span>{leg.label} {leg.status && <em className={`status-chip ${leg.status.toLowerCase()}`}>{leg.status}</em>}</span>
               <small>{leg.duration}</small>
             </div>
             <h3>{leg.from} <span>→</span> {leg.to}</h3>

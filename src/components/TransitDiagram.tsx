@@ -5,11 +5,9 @@ type Props = {
 };
 
 export function TransitDiagram({ legs }: Props) {
-  const important = legs.filter((_, index) => [0, 1, 3, 4, 7, 8, 10, 11].includes(index));
-
   return (
-    <div className="transit-diagram" role="img" aria-label="Schéma denní trasy metrem">
-      {important.map((leg, index) => (
+    <div className="transit-diagram" role="img" aria-label="Schéma denní trasy">
+      {legs.map((leg, index) => (
         <div className="diagram-leg" key={`${leg.from}-${leg.to}`}>
           <div className="diagram-node">
             <span
@@ -29,7 +27,7 @@ export function TransitDiagram({ legs }: Props) {
             <small>{leg.duration}</small>
           </div>
 
-          {index === important.length - 1 && (
+          {index === legs.length - 1 && (
             <div className="diagram-node final">
               <span className="line-badge destination">展</span>
               <div>
