@@ -1,0 +1,34 @@
+import { ArrowLeft, CloudRain, MapPin } from 'lucide-react';
+import type { DayGuide } from '../data/dayTypes';
+
+type Props = {
+  onBack: () => void;
+  guide: DayGuide;
+};
+
+export function DayHero({ onBack, guide }: Props) {
+  return (
+    <section className="day-hero">
+      <button className="back-button" onClick={onBack}>
+        <ArrowLeft size={18} /> Zpět na cestu
+      </button>
+
+      <div className="day-hero-art" aria-hidden="true">
+        <span className="city-grid" />
+        <span className="day-sun" />
+        <span className="day-torii torii-one" />
+        <span className="day-torii torii-two" />
+      </div>
+
+      <div className="day-hero-copy">
+        <span className="eyebrow light">{guide.date} · {guide.weekday.toUpperCase()} · {guide.city.toUpperCase()}</span>
+        <h1>{guide.title}</h1>
+        <p>{guide.intro}</p>
+        <div className="day-facts">
+          <span><MapPin size={16} /> {guide.theme}</span>
+          <span><CloudRain size={16} /> {guide.weatherNote}</span>
+        </div>
+      </div>
+    </section>
+  );
+}

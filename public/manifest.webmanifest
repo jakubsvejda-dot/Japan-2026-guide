@@ -1,0 +1,17 @@
+{
+  "name": "Mise tří dobrodruhů — Japonsko 2026",
+  "short_name": "Japonsko 2026",
+  "start_url": "/Japan-2026-guide/",
+  "scope": "/Japan-2026-guide/",
+  "display": "standalone",
+  "background_color": "#f2eee7",
+  "theme_color": "#a6322b",
+  "icons": [
+    {
+      "src": "./assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
