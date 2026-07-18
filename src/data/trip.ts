@@ -101,6 +101,21 @@ export const chapters: Chapter[] = [
   },
 ];
 
+export const chapterDayIds: Record<string, string[]> = {
+  tokyo: ['tokyo-21', 'tokyo-22'],
+  fuji: ['fuji-23'],
+  kyoto: ['kyoto-24', 'kyoto-25', 'kyoto-26'],
+  osaka: ['osaka-27', 'nara-28', 'osaka-29'],
+  miyajima: ['miyajima-30'],
+  naoshima: ['naoshima-31', 'naoshima-01', 'naoshima-02'],
+  himeji: ['himeji-03'],
+  'tokyo-final': ['tokyo-04'],
+};
+
+export function chapterForDay(dayId: string): string | undefined {
+  return Object.entries(chapterDayIds).find(([, ids]) => ids.includes(dayId))?.[0];
+}
+
 export const tripStats = [
   { value: '17', label: 'dní' },
   { value: '8', label: 'kapitol' },

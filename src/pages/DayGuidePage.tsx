@@ -111,6 +111,7 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
 
       <nav className="day-navigation" aria-label="Navigace mezi dny">
         {previousDay ? <button onClick={() => onNavigate(previousDay.id)}>← {previousDay.date}</button> : <span />}
+        <button className="day-list-button" onClick={onBack}>Seznam dnů</button>
         {nextDay ? <button onClick={() => onNavigate(nextDay.id)}>{nextDay.date} →</button> : <span />}
       </nav>
     </>

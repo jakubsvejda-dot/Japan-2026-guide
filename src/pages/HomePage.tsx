@@ -3,13 +3,9 @@ import { JourneyMap } from '../components/JourneyMap';
 import { ChapterCard } from '../components/ChapterCard';
 import { chapters } from '../data/trip';
 
-type Props = {
-  onOpenDay: (id: string) => void;
-};
+type Props = { onOpenChapter: (id: string) => void };
 
-const chapterDays: Record<string, string> = { tokyo: 'tokyo-21', fuji: 'fuji-23', kyoto: 'kyoto-24', osaka: 'osaka-27', miyajima: 'miyajima-30', naoshima: 'naoshima-31', himeji: 'himeji-03', 'tokyo-final': 'tokyo-04' };
-
-export function HomePage({ onOpenDay }: Props) {
+export function HomePage({ onOpenChapter }: Props) {
   return (
     <>
       <Hero />
@@ -33,7 +29,7 @@ export function HomePage({ onOpenDay }: Props) {
               chapter={chapter}
               index={index}
               key={chapter.id}
-              onOpen={() => onOpenDay(chapterDays[chapter.id])}
+              onOpen={() => onOpenChapter(chapter.id)}
             />
           ))}
         </div>
@@ -43,8 +39,8 @@ export function HomePage({ onOpenDay }: Props) {
         <span className="eyebrow">FÁZE 2</span>
         <h2>První kompletní detail dne</h2>
         <p>Každá kapitola vede k aktuálnímu dennímu programu s potvrzenými rezervacemi, doporučenou logistikou a otevřenými položkami.</p>
-        <button className="text-action" onClick={() => onOpenDay('tokyo-21')}>
-          Otevřít itinerář →
+        <button className="text-action" onClick={() => onOpenChapter('tokyo')}>
+          Vybrat den →
         </button>
       </section>
     </>

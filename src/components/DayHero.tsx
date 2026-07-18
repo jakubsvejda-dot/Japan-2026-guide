@@ -1,4 +1,4 @@
-import { ArrowLeft, CloudRain, MapPin } from 'lucide-react';
+import { ArrowLeft, CalendarDays, MapPin, Target } from 'lucide-react';
 import type { DayGuide } from '../data/dayTypes';
 
 type Props = {
@@ -21,12 +21,16 @@ export function DayHero({ onBack, guide }: Props) {
       </div>
 
       <div className="day-hero-copy">
-        <span className="eyebrow light">{guide.date} · {guide.weekday.toUpperCase()} · {guide.city.toUpperCase()}</span>
+        <div className="day-orientation" aria-label="Orientace dne">
+          <span><CalendarDays size={16} /> {guide.date}</span>
+          <span><MapPin size={16} /> {guide.city}</span>
+          <span><Target size={16} /> Dnešní cíl: {guide.theme}</span>
+        </div>
         <h1>{guide.title}</h1>
         <p>{guide.intro}</p>
         <div className="day-facts">
-          <span><MapPin size={16} /> {guide.theme}</span>
-          <span><CloudRain size={16} /> {guide.weatherNote}</span>
+          <span>{guide.weekday.toUpperCase()}</span>
+          <span>{guide.weatherNote}</span>
         </div>
       </div>
     </section>
