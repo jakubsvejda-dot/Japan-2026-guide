@@ -7,7 +7,7 @@ type Props = {
 
 function ModeIcon({ mode }: { mode: TransitLeg['mode'] }) {
   if (mode === 'walk') return <Footprints size={19} />;
-  if (mode === 'metro' || mode === 'yurikamome') return <TrainFront size={19} />;
+  if (mode === 'metro') return <TrainFront size={19} />;
   return <ArrowRightLeft size={19} />;
 }
 

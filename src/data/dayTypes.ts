@@ -1,4 +1,4 @@
-export type TransitMode = 'walk' | 'metro' | 'yurikamome' | 'train' | 'bus' | 'taxi' | 'ferry' | 'bike';
+export type TransitMode = 'walk' | 'metro' | 'train' | 'shinkansen' | 'bus' | 'taxi' | 'ferry' | 'bike';
 
 export type TransitLeg = {
   mode: TransitMode;
@@ -6,11 +6,14 @@ export type TransitLeg = {
   from: string;
   to: string;
   detail: string;
+  /** Linka, typ spoje nebo název trajektu, pokud je ve Source of Truth uveden. */
   line?: string;
+  /** Přestup, výstup nebo praktické navázání, pokud je ve Source of Truth uvedeno. */
+  transfer?: string;
   lineCode?: string;
   lineColor?: string;
   duration: string;
-  status?: ItemStatus;
+  status: ItemStatus;
 };
 
 export type ItemStatus = 'CONFIRMED' | 'AGREED' | 'RECOMMENDED' | 'OPTIONAL' | 'RECHECK' | 'OPEN';

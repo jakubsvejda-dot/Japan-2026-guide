@@ -1,6 +1,19 @@
-import type { DayGuide, ItemStatus, TransitLeg } from './dayTypes';
+import type { DayGuide, ItemStatus, TransitLeg, TransitMode } from './dayTypes';
 
-const recommended = (label: string, from: string, to: string, detail: string, duration = 'dle provozu'): TransitLeg => ({ mode: 'train', label, from, to, detail, duration, status: 'RECOMMENDED' });
+type TransitOptions = Partial<Pick<TransitLeg, 'duration' | 'line' | 'transfer' | 'lineCode' | 'lineColor' | 'status'>>;
+
+const leg = (mode: TransitMode, label: string, from: string, to: string, detail: string, options: TransitOptions = {}): TransitLeg => ({
+  mode,
+  label,
+  from,
+  to,
+  detail,
+  duration: 'dle provozu',
+  status: 'RECOMMENDED',
+  ...options,
+});
+// Legacy source entries are replaced at registry load by transport overrides.
+const recommended = (label: string, from: string, to: string, detail: string, duration = 'dle provozu'): TransitLeg => leg('train', label, from, to, detail, { duration });
 const item = (title: string, detail: string, status: ItemStatus = 'AGREED') => ({ title, detail, status });
 const day = (data: Omit<DayGuide, 'places' | 'food' | 'japanToday' | 'packing'> & Partial<Pick<DayGuide, 'places' | 'food' | 'japanToday' | 'packing'>>): DayGuide => ({ places: [], food: [], japanToday: [], packing: [], ...data });
 

@@ -1,7 +1,6 @@
 import { AlertTriangle, Clock3, Ticket, Utensils } from 'lucide-react';
 import { DayHero } from '../components/DayHero';
 import { TransitDiagram } from '../components/TransitDiagram';
-import { TransitSteps } from '../components/TransitSteps';
 import { PlaceStoryCard } from '../components/PlaceStoryCard';
 import { FoodGallery } from '../components/FoodGallery';
 import type { DayGuide } from '../data/dayTypes';
@@ -55,18 +54,11 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
         <div className="section-heading">
           <div>
             <span className="eyebrow">OFFLINE TRASA</span>
-            <h2>Jak se tam dostaneme</h2>
-            <p>Doporučená logistika. Položky RECHECK je nutné ověřit před cestou.</p>
+            <h2>Doprava bez hádání</h2>
+            <p>Každý přesun, přestup i pěší úsek samostatně. Položky RECHECK je nutné ověřit před cestou.</p>
           </div>
         </div>
         <TransitDiagram legs={guide.transit} />
-      </section>}
-
-      {guide.transit.length > 0 && <section className="section transport-detail-section">
-        <div className="section-heading">
-          <div><span className="eyebrow">KROK ZA KROKEM</span><h2>Doprava bez hádání</h2><p>Každý přestup a pěší úsek samostatně.</p></div>
-        </div>
-        <TransitSteps legs={guide.transit} />
       </section>}
 
       {guide.schedule.length > 0 && <section className="section">

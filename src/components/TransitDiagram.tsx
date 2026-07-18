@@ -1,3 +1,4 @@
+import { Bike, Bus, CarTaxiFront, Footprints, ShipWheel, TrainFront } from 'lucide-react';
 import type { TransitLeg } from '../data/dayTypes';
 
 type Props = {
@@ -6,38 +7,32 @@ type Props = {
 
 export function TransitDiagram({ legs }: Props) {
   return (
-    <div className="transit-diagram" role="img" aria-label="Schéma denní trasy">
+    <ol className="transit-diagram" aria-label="Doprava bez hádání">
       {legs.map((leg, index) => (
-        <div className="diagram-leg" key={`${leg.from}-${leg.to}`}>
-          <div className="diagram-node">
-            <span
-              className="line-badge"
-              style={{ background: leg.lineColor ?? '#6f6861' }}
-            >
-              {leg.lineCode ?? '•'}
-            </span>
-            <div>
-              <strong>{leg.from}</strong>
-              <small>{leg.label}</small>
+        <li className="diagram-leg" key={`${leg.from}-${leg.to}-${index}`}>
+          <span className="diagram-icon" aria-hidden="true"><ModeIcon mode={leg.mode} /></span>
+          <div className="diagram-copy">
+            <div className="diagram-topline">
+              <strong>{leg.label}</strong>
+              <span className={`status-chip ${leg.status.toLowerCase()}`}>{leg.status}</span>
+              {leg.duration !== 'dle provozu' && <small>{leg.duration}</small>}
             </div>
+            <h3>{leg.from} <span>→</span> {leg.to}</h3>
+            {leg.line && <p className="diagram-line">{leg.line}</p>}
+            {leg.transfer && <p className="diagram-transfer">{leg.transfer}</p>}
+            <p>{leg.detail}</p>
           </div>
-
-          <div className="diagram-connector">
-            <span style={{ background: leg.lineColor ?? '#b8aea2' }} />
-            <small>{leg.duration}</small>
-          </div>
-
-          {index === legs.length - 1 && (
-            <div className="diagram-node final">
-              <span className="line-badge destination">展</span>
-              <div>
-                <strong>{leg.to}</strong>
-                <small>cíl posledního přesunu</small>
-              </div>
-            </div>
-          )}
-        </div>
+        </li>
       ))}
-    </div>
+    </ol>
   );
+}
+
+function ModeIcon({ mode }: { mode: TransitLeg['mode'] }) {
+  if (mode === 'walk') return <Footprints size={19} />;
+  if (mode === 'bike') return <Bike size={19} />;
+  if (mode === 'bus') return <Bus size={19} />;
+  if (mode === 'taxi') return <CarTaxiFront size={19} />;
+  if (mode === 'ferry') return <ShipWheel size={19} />;
+  return <TrainFront size={19} />;
 }
