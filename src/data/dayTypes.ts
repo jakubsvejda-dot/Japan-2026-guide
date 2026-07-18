@@ -28,12 +28,25 @@ export type PlaceStory = {
   id: string;
   time: string;
   name: string;
-  japanese: string;
-  lead: string;
-  body: string;
-  notice: string;
-  illustration: string;
-  observe: string[];
+  japanese?: string;
+  lead?: string;
+  body?: string;
+  notice?: string;
+  illustration?: string;
+  observe?: string[];
+  image?: PlaceImage;
+  whyWeGo?: string[];
+  highlights?: string[];
+  practicalTip?: string;
+  mapsUrl?: string;
+};
+
+export type PlaceImage = {
+  src: string;
+  alt: string;
+  credit: string;
+  license: string;
+  sourceUrl: string;
 };
 
 export type FoodTip = {
