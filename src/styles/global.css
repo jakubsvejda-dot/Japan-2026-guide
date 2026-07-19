@@ -207,15 +207,15 @@ main { width: min(1180px, 100%); margin: 0 auto; padding: 14px 18px 80px; }
 .conflict-alert { display: flex; gap: 14px; margin-top: 16px; padding: 19px; border-radius: 20px; border: 1px solid #d89b37; background: color-mix(in srgb, #d89b37 14%, var(--surface)); }
 .conflict-alert svg { flex: none; color: #b77718; }.conflict-alert p { margin: 5px 0 0; color: var(--muted); line-height: 1.5; }
 
-.transit-diagram { display: grid; gap: 0; margin: 0; padding: 12px 20px; list-style: none; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); }
-.diagram-leg { position: relative; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 18px 0; }
-.diagram-leg:not(:last-child)::before { content: ''; position: absolute; left: 22px; top: 60px; bottom: -2px; width: 2px; background: var(--line); }
+.transit-diagram { display: grid; gap: 0; margin: 0; padding: 9px 17px; list-style: none; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); }
+.diagram-leg { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 13px 0; }
+.diagram-leg:not(:last-child)::before { content: ''; position: absolute; left: 20px; top: 55px; bottom: -2px; width: 2px; background: var(--line); }
 .diagram-icon { z-index: 1; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; color: var(--red); background: var(--surface-alt); border: 1px solid var(--line); }
 .diagram-copy { min-width: 0; }
 .diagram-topline { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; color: var(--red); font-size: 12px; letter-spacing: .04em; }
 .diagram-topline small { margin-left: auto; color: var(--muted); font-size: 12px; letter-spacing: 0; }
-.diagram-copy h3 { margin: 7px 0; font-size: 18px; overflow-wrap: anywhere; }.diagram-copy h3 span { color: var(--muted); }
-.diagram-copy p { margin: 5px 0 0; color: var(--muted); line-height: 1.48; font-size: 13px; overflow-wrap: anywhere; }
+.diagram-copy h3 { margin: 4px 0; font-size: 18px; overflow-wrap: anywhere; }.diagram-copy h3 span { color: var(--muted); }
+.diagram-copy p { margin: 3px 0 0; color: var(--muted); line-height: 1.44; font-size: 13px; overflow-wrap: anywhere; }
 .diagram-copy .diagram-line { color: var(--ink); font-weight: 750; }
 .diagram-copy .diagram-transfer { padding-left: 10px; border-left: 3px solid var(--line); }
 
@@ -228,9 +228,9 @@ main { width: min(1180px, 100%); margin: 0 auto; padding: 14px 18px 80px; }
 .transit-step p { margin: 0; color: var(--muted); line-height: 1.48; font-size: 13px; }
 
 .schedule-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 25px; overflow: hidden; background: var(--surface); }
-.schedule-grid article { display: grid; grid-template-columns: 92px 1fr; gap: 13px; padding: 19px; border-bottom: 1px solid var(--line); }
+.schedule-grid article { display: grid; grid-template-columns: 92px 1fr; gap: 11px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
 .schedule-grid article:nth-child(odd) { border-right: 1px solid var(--line); }
-.schedule-grid time { color: var(--red); font-weight: 900; }.schedule-grid strong { display: block; }.schedule-grid p { margin: 5px 0 0; color: var(--muted); line-height: 1.45; font-size: 13px; }
+.schedule-grid time { color: var(--red); font-weight: 900; }.schedule-grid strong { display: block; }.schedule-grid p { margin: 3px 0 0; color: var(--muted); line-height: 1.42; font-size: 13px; }
 
 .route-map-section { padding-top: 44px; }
 .route-map-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }

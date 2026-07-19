@@ -61,7 +61,7 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
         <div className="section-heading">
           <div>
             <span className="eyebrow">POTVRZENÉ</span>
-            <h2>Rezervace, které chrání den</h2>
+            <h2>Rezervace</h2>
           </div>
         </div>
         <div className="item-grid">{guide.reservations.map((item) => <article key={item.title}><span className={statusClass(item.status)}>{item.status}</span><h3>{item.title}</h3><p>{item.detail}</p></article>)}</div>

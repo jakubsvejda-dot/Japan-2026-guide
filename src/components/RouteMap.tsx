@@ -187,7 +187,7 @@ export function RouteMap({ guide }: Props) {
   return (
     <section className="section route-map-section">
       <div className="section-heading"><div><span className="eyebrow">ORIENTACE</span><h2>{map.transportAxis ? 'Cesta dne' : 'Mapa dne'}</h2>
-        <p>{map.transportAxis ? 'Dlouhý přesun je zobrazený jako jedna srozumitelná osa. Místní mapa ukazuje, kde se pak budete pohybovat.' : 'Offline mapa skutečného okolí s vyznačenými místy; podrobný postup zůstává v dopravě níže.'}</p>
+        {map.transportAxis && <p>Dlouhý přesun je zobrazený jako jedna srozumitelná osa. Místní mapa ukazuje, kde se pak budete pohybovat.</p>}
       </div></div>
       {map.transportAxis && <TransferAxis legs={guide.transit} />}
       {panels.length > 0 && <div className={`route-map-layout ${panels.length > 1 ? 'is-transfer' : ''}`}>{panels.map(({ panel, stops }) => <MapPanel key={panel.title} panel={panel} stops={stops} />)}</div>}
