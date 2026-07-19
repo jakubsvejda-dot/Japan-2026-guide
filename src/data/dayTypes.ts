@@ -1,3 +1,5 @@
+import type { DayNarrative } from './dayNarratives';
+
 export type TransitMode = 'walk' | 'metro' | 'train' | 'shinkansen' | 'bus' | 'taxi' | 'ferry' | 'bike';
 
 export type TransitLeg = {
@@ -70,6 +72,7 @@ export type DayGuide = {
   theme: string;
   status: ItemStatus;
   intro: string;
+  narrative?: DayNarrative;
   weatherNote: string;
   reservationWarning?: string;
   schedule: ({ time: string; title: string; note: string; status?: ItemStatus } | ItineraryItem)[];

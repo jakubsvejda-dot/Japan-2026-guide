@@ -7,7 +7,7 @@ export function JourneyMap() {
         <div>
           <span className="eyebrow">NAŠE CESTA</span>
           <h2>Od neonu k moři a zpět</h2>
-          <p>Responzivní přehled trasy. Na malém displeji se mapa skládá do čitelné svislé cesty.</p>
+          <p>Tokio, Fuji, Kjóto, Ósaka, ostrovy a návrat — jedna společná cesta.</p>
         </div>
       </div>
 

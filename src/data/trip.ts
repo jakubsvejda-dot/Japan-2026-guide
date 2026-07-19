@@ -8,6 +8,8 @@ export type Chapter = {
   accent: string;
   highlights: string[];
   symbol: string;
+  image: string;
+  imageAlt: string;
 };
 
 export const chapters: Chapter[] = [
@@ -21,6 +23,8 @@ export const chapters: Chapter[] = [
     accent: '#b73b32',
     highlights: ['Meiji Jingu', 'teamLab Planets', 'Shibuya Sky'],
     symbol: '東京',
+    image: 'assets/places/shibuya-crossing.jpg',
+    imageAlt: 'Shibuya Crossing v Tokiu.',
   },
   {
     id: 'fuji',
@@ -32,6 +36,8 @@ export const chapters: Chapter[] = [
     accent: '#d89b37',
     highlights: ['Kawaguchiko', 'Oshino Hakkai', 'Chureito'],
     symbol: '富士',
+    image: 'assets/places/chureito.jpg',
+    imageAlt: 'Chureito Pagoda s horou Fuji.',
   },
   {
     id: 'kyoto',
@@ -43,6 +49,8 @@ export const chapters: Chapter[] = [
     accent: '#8d4a43',
     highlights: ['Kiyomizu-dera', 'Čajový obřad', 'Arashiyama'],
     symbol: '京都',
+    image: 'assets/places/kiyomizu.jpg',
+    imageAlt: 'Kiyomizu-dera v Kjótu.',
   },
   {
     id: 'osaka',
@@ -54,6 +62,8 @@ export const chapters: Chapter[] = [
     accent: '#de6e33',
     highlights: ['Dotonbori', 'Kuromon', 'Nara Park'],
     symbol: '大阪',
+    image: 'assets/places/dotonbori.jpg',
+    imageAlt: 'Neony Dotonbori v Ósace v noci.',
   },
   {
     id: 'miyajima',
@@ -65,6 +75,8 @@ export const chapters: Chapter[] = [
     accent: '#a33d35',
     highlights: ['Torii', 'Itsukushima', 'Večerní ostrov'],
     symbol: '宮島',
+    image: 'assets/places/itsukushima.jpg',
+    imageAlt: 'Torii svatyně Itsukushima na Mijadžimě.',
   },
   {
     id: 'naoshima',
@@ -76,6 +88,8 @@ export const chapters: Chapter[] = [
     accent: '#347e71',
     highlights: ['Elektrokola', 'Chichu', 'Tsutsuji beach'],
     symbol: '直島',
+    image: 'assets/places/yellow-pumpkin.jpg',
+    imageAlt: 'Žlutá dýně na Naošimě.',
   },
   {
     id: 'himeji',
@@ -87,6 +101,8 @@ export const chapters: Chapter[] = [
     accent: '#516b85',
     highlights: ['Himeji Castle', 'Koko-en', 'Nozomi 46'],
     symbol: '姫路',
+    image: 'assets/places/himeji.jpg',
+    imageAlt: 'Hrad Himedži.',
   },
   {
     id: 'tokyo-final',
@@ -98,6 +114,8 @@ export const chapters: Chapter[] = [
     accent: '#745070',
     highlights: ['Toyosu', 'Sensō-ji', 'Akihabara'],
     symbol: '終章',
+    image: 'assets/places/sensoji.jpg',
+    imageAlt: 'Chrám Sensō-ji v Asakuse.',
   },
 ];
 

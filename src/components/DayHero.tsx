@@ -7,18 +7,19 @@ type Props = {
 };
 
 export function DayHero({ onBack, guide }: Props) {
+  const heroImage = guide.places[0]?.image;
   return (
     <section className="day-hero">
       <button className="back-button" onClick={onBack}>
         <ArrowLeft size={18} /> Zpět na cestu
       </button>
 
-      <div className="day-hero-art" aria-hidden="true">
+      {heroImage ? <img className="day-hero-image" src={heroImage.src} alt="" /> : <div className="day-hero-art" aria-hidden="true">
         <span className="city-grid" />
         <span className="day-sun" />
         <span className="day-torii torii-one" />
         <span className="day-torii torii-two" />
-      </div>
+      </div>}
 
       <div className="day-hero-copy">
         <div className="day-orientation" aria-label="Orientace dne">
@@ -27,7 +28,6 @@ export function DayHero({ onBack, guide }: Props) {
           <span><Target size={16} /> Dnešní cíl: {guide.theme}</span>
         </div>
         <h1>{guide.title}</h1>
-        <p>{guide.intro}</p>
         <div className="day-facts">
           <span>{guide.weekday.toUpperCase()}</span>
           <span>{guide.weatherNote}</span>
