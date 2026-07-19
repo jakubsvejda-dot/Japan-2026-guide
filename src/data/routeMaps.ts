@@ -5,16 +5,33 @@ export type GeoStop = {
   label: string;
   latitude: number;
   longitude: number;
+  mapMarkerId?: string;
+  mapMarkerLabel?: string;
+};
+
+export type MapView = {
+  asset: string;
+  /** The exact OpenStreetMap embed bbox used to create the offline snapshot. */
+  bbox: readonly [west: number, south: number, east: number, north: number];
+  cropInset: number;
 };
 
 export type RouteMapPanel = {
   title: string;
   stopIds: string[];
   note?: string;
+  view?: MapView;
+  showOrder?: boolean;
+  /** Tiny visual separation for genuinely nearby stops; the route itself stays at the true coordinate. */
+  markerOffsets?: Record<string, { dx: number; dy: number }>;
+  /** Rare hand-tuned positions for two labels that share an especially tight real-world cluster. */
+  labelOverrides?: Record<string, { dx: number; dy: number; anchor: 'start' | 'end' }>;
 };
 
 export type RouteMap = {
   panels: RouteMapPanel[];
+  /** Long-distance days use the already-confirmed transit legs as one readable route axis. */
+  transportAxis?: boolean;
 };
 
 // Coordinates were checked with OpenStreetMap Nominatim on 19 July 2026.
@@ -26,8 +43,8 @@ const stops: Record<string, GeoStop> = {
   meijiJingu: { id: 'meijiJingu', label: 'Meiji Jingu', latitude: 35.6748417, longitude: 139.6996266 },
   harajuku: { id: 'harajuku', label: 'Harajuku', latitude: 35.6711612, longitude: 139.7049553 },
   teamLab: { id: 'teamLab', label: 'teamLab Planets', latitude: 35.64938, longitude: 139.789728 },
-  shibuyaCrossing: { id: 'shibuyaCrossing', label: 'Shibuya Crossing', latitude: 35.6594951, longitude: 139.7004982 },
-  shibuyaSky: { id: 'shibuyaSky', label: 'Shibuya Sky', latitude: 35.6582857, longitude: 139.7022617 },
+  shibuyaCrossing: { id: 'shibuyaCrossing', label: 'Shibuya Crossing', latitude: 35.6594951, longitude: 139.7004982, mapMarkerId: 'shibuya', mapMarkerLabel: 'Shibuya Crossing · Shibuya Sky' },
+  shibuyaSky: { id: 'shibuyaSky', label: 'Shibuya Sky', latitude: 35.6582857, longitude: 139.7022617, mapMarkerId: 'shibuya', mapMarkerLabel: 'Shibuya Crossing · Shibuya Sky' },
   chureito: { id: 'chureito', label: 'Chureito Pagoda', latitude: 35.5012871, longitude: 138.8013556 },
   kawaguchiko: { id: 'kawaguchiko', label: 'Lake Kawaguchiko', latitude: 35.5130603, longitude: 138.7448243 },
   oshino: { id: 'oshino', label: 'Oshino Hakkai', latitude: 35.4602407, longitude: 138.8327032 },
@@ -66,6 +83,8 @@ const stops: Record<string, GeoStop> = {
   toyosu: { id: 'toyosu', label: 'Toyosu Market', latitude: 35.6449472, longitude: 139.7846947 },
   sensoJi: { id: 'sensoJi', label: 'Sensō-ji', latitude: 35.7134032, longitude: 139.7955265 },
   akihabara: { id: 'akihabara', label: 'Akihabara', latitude: 35.7018928, longitude: 139.7743684 },
+  // Exact coordinates from the hotel's official embedded map (2-9-10 Asakusa, Taito-ku).
+  asakusaViewHotel: { id: 'asakusaViewHotel', label: 'Asakusa View Hotel Annex Rokku', mapMarkerLabel: 'Asakusa View Hotel\nAnnex Rokku', latitude: 35.714775935738416, longitude: 139.79097941553164 },
   haneda: { id: 'haneda', label: 'Haneda', latitude: 35.5456924, longitude: 139.7760994 },
 };
 
@@ -81,41 +100,77 @@ const placeStopIds: Record<string, string> = {
   'senso-ji': 'sensoJi', akihabara: 'akihabara',
 };
 
+const mapViews: Record<string, MapView> = {
+  'tokyo-22': { asset: 'assets/maps/tokyo-22.jpg', bbox: [139.66, 35.61, 139.83, 35.72], cropInset: 40 },
+  'fuji-23': { asset: 'assets/maps/fuji-23.jpg', bbox: [138.67, 35.42, 138.89, 35.56], cropInset: 40 },
+  'kyoto-24': { asset: 'assets/maps/kyoto-24.jpg', bbox: [135.73, 34.96, 135.80, 35.03], cropInset: 40 },
+  'kyoto-25': { asset: 'assets/maps/kyoto-25.jpg', bbox: [135.73, 34.97, 135.81, 35.03], cropInset: 40 },
+  'kyoto-26': { asset: 'assets/maps/kyoto-26.jpg', bbox: [135.61, 34.94, 135.83, 35.06], cropInset: 40 },
+  'osaka-27': { asset: 'assets/maps/osaka-27.jpg', bbox: [135.47, 34.63, 135.54, 34.70], cropInset: 40 },
+  'nara-28': { asset: 'assets/maps/nara-28.jpg', bbox: [135.80, 34.65, 135.89, 34.72], cropInset: 40 },
+  'osaka-29': { asset: 'assets/maps/osaka-29.jpg', bbox: [135.45, 34.62, 135.57, 34.74], cropInset: 40 },
+  'miyajima-30': { asset: 'assets/maps/miyajima-30.jpg', bbox: [132.27, 34.25, 132.36, 34.34], cropInset: 40 },
+  'naoshima-31': { asset: 'assets/maps/naoshima-31.jpg', bbox: [133.94, 34.41, 134.03, 34.49], cropInset: 40 },
+  'naoshima-01': { asset: 'assets/maps/naoshima-01.jpg', bbox: [133.94, 34.41, 134.03, 34.49], cropInset: 40 },
+  'naoshima-02': { asset: 'assets/maps/naoshima-02.jpg', bbox: [133.94, 34.41, 134.03, 34.49], cropInset: 40 },
+  'himeji-03': { asset: 'assets/maps/himeji-03.jpg', bbox: [134.64, 34.80, 134.75, 34.88], cropInset: 40 },
+  'tokyo-04': { asset: 'assets/maps/tokyo-04.jpg', bbox: [139.72, 35.60, 139.84, 35.75], cropInset: 40 },
+};
+
 const overrides: Record<string, RouteMap> = {
-  'tokyo-21': { panels: [{ title: 'Příjezd do Tokia', stopIds: ['narita', 'toshi'] }] },
-  'kyoto-24': { panels: [
-    { title: 'Tokio', stopIds: ['toshi', 'tokyoStation'] },
-    { title: 'Kjóto', stopIds: ['kyotoStation', 'kabin'] },
-  ] },
-  'kyoto-26': { panels: [{ title: 'Kjóto', stopIds: ['kabin', 'arashiyama'], note: 'Adresa samurajského workshopu zůstává RECHECK, proto není v mapě.' }] },
-  'osaka-27': { panels: [
-    { title: 'Kjóto', stopIds: ['fushimi'] },
-    { title: 'Ósaka', stopIds: ['nippombashi', 'denDen', 'dotonbori'] },
-  ] },
-  'nara-28': { panels: [{ title: 'Nara', stopIds: ['kintetsuNara', 'naraPark', 'todaiJi'] }] },
-  'osaka-29': { panels: [{ title: 'Ósaka', stopIds: ['osakaCastle', 'amerikamura', 'kitte', 'umedaSky'] }] },
-  'miyajima-30': { panels: [
-    { title: 'Ósaka', stopIds: ['shinOsaka'] },
-    { title: 'Hirošima', stopIds: ['hiroshima', 'miyajimaguchi'] },
-    { title: 'Mijadžima', stopIds: ['miyajimaPier', 'itsukushima'] },
-  ] },
-  'naoshima-31': { panels: [
-    { title: 'Mijadžima', stopIds: ['miyajimaPier', 'miyajimaguchi'] },
-    { title: 'Hirošima', stopIds: ['hiroshima'] },
-    { title: 'Okayama / Uno', stopIds: ['okayama', 'uno'] },
-    { title: 'Naošima', stopIds: ['miyanoura', 'tsutsuji'] },
-  ] },
-  'naoshima-01': { panels: [{ title: 'Naošima', stopIds: ['miyanoura', 'honmura', 'yellowPumpkin', 'tsutsuji'] }] },
-  'naoshima-02': { panels: [{ title: 'Naošima', stopIds: ['tsutsuji', 'chichu'] }] },
-  'himeji-03': { panels: [
-    { title: 'Naošima / Uno', stopIds: ['tsutsuji', 'miyanoura', 'uno'] },
-    { title: 'Himedži', stopIds: ['himeji', 'kokoEn'] },
-    { title: 'Tokio', stopIds: ['tokyoStation'] },
-  ] },
-  'tokyo-04': { panels: [
-    { title: 'Tokio', stopIds: ['toyosu', 'sensoJi', 'akihabara'] },
-    { title: 'Odlet', stopIds: ['haneda'] },
-  ] },
+  'tokyo-21': { panels: [], transportAxis: true },
+  'tokyo-22': { panels: [{
+    title: 'Tokio',
+    stopIds: ['toshi', 'meijiJingu', 'harajuku', 'teamLab', 'shibuyaCrossing', 'shibuyaSky', 'toshi'],
+    view: mapViews['tokyo-22'],
+    showOrder: true,
+    markerOffsets: {
+      meijiJingu: { dx: -2.6, dy: -2.6 },
+      harajuku: { dx: 2.6, dy: 2.6 },
+    },
+  }] },
+  'kyoto-24': { panels: [{ title: 'Kjóto po příjezdu', stopIds: ['kyotoStation', 'kabin'], view: mapViews['kyoto-24'] }], transportAxis: true },
+  'kyoto-25': { panels: [{
+    title: 'Kjóto',
+    stopIds: ['kabin', 'kiyomizu', 'sannenzaka', 'kodaiJi', 'gion'],
+    view: mapViews['kyoto-25'],
+    showOrder: true,
+    markerOffsets: {
+      kiyomizu: { dx: -2.6, dy: 2.6 },
+      sannenzaka: { dx: 2.6, dy: -2.6 },
+    },
+    labelOverrides: {
+      kabin: { dx: -8, dy: -6, anchor: 'end' },
+      kiyomizu: { dx: -5, dy: 10, anchor: 'end' },
+    },
+  }] },
+  'kyoto-26': { panels: [{ title: 'Kjóto', stopIds: ['kabin', 'arashiyama'], note: 'Adresa samurajského workshopu zůstává RECHECK, proto není v mapě.', view: mapViews['kyoto-26'] }] },
+  'osaka-27': { panels: [{ title: 'Ósaka po příjezdu', stopIds: ['nippombashi', 'denDen', 'dotonbori', 'nippombashi'], view: mapViews['osaka-27'] }], transportAxis: true },
+  'nara-28': { panels: [{ title: 'Nara', stopIds: ['kintetsuNara', 'naraPark', 'todaiJi', 'kintetsuNara'], view: mapViews['nara-28'] }], transportAxis: true },
+  'osaka-29': { panels: [{ title: 'Ósaka', stopIds: ['nippombashi', 'osakaCastle', 'amerikamura', 'kitte', 'umedaSky'], view: mapViews['osaka-29'] }] },
+  'miyajima-30': { panels: [{ title: 'Mijadžima po příjezdu', stopIds: ['miyajimaPier', 'itsukushima'], view: mapViews['miyajima-30'] }], transportAxis: true },
+  'naoshima-31': { panels: [{ title: 'Naošima po příjezdu', stopIds: ['miyanoura', 'tsutsuji'], view: mapViews['naoshima-31'] }], transportAxis: true },
+  'naoshima-01': { panels: [{
+    title: 'Naošima',
+    stopIds: ['tsutsuji', 'miyanoura', 'honmura', 'yellowPumpkin', 'tsutsuji'],
+    view: mapViews['naoshima-01'],
+    showOrder: true,
+    markerOffsets: {
+      tsutsuji: { dx: 2.4, dy: -2.4 },
+      yellowPumpkin: { dx: -2.4, dy: 2.4 },
+    },
+  }] },
+  'naoshima-02': { panels: [{ title: 'Naošima', stopIds: ['tsutsuji', 'chichu'], view: mapViews['naoshima-02'] }] },
+  'himeji-03': { panels: [{ title: 'Himedži', stopIds: ['himeji', 'kokoEn'], view: mapViews['himeji-03'] }], transportAxis: true },
+  'tokyo-04': { panels: [{
+    title: 'Tokio',
+    stopIds: ['asakusaViewHotel', 'toyosu', 'asakusaViewHotel', 'sensoJi', 'akihabara', 'asakusaViewHotel'],
+    view: mapViews['tokyo-04'],
+    labelOverrides: {
+      asakusaViewHotel: { dx: 5, dy: -10, anchor: 'start' },
+      sensoJi: { dx: 5, dy: 9, anchor: 'start' },
+    },
+  }], transportAxis: true },
 };
 
 export function stopsForPanel(panel: RouteMapPanel): GeoStop[] {
@@ -130,5 +185,5 @@ export function routeMapForDay(guide: DayGuide): RouteMap | undefined {
     .map((place) => placeStopIds[place.id])
     .filter((id): id is string => Boolean(id));
 
-  return stopIds.length ? { panels: [{ title: guide.city, stopIds }] } : undefined;
+  return stopIds.length ? { panels: [{ title: guide.city, stopIds, view: mapViews[guide.id] }] } : undefined;
 }

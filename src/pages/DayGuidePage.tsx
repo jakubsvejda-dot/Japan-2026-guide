@@ -16,6 +16,7 @@ type Props = {
 
 export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }: Props) {
   const statusClass = (status: string) => `status-chip ${status.toLowerCase()}`;
+  const narrative = guide.narrative;
   return (
     <>
       <DayHero onBack={onBack} guide={guide} />
@@ -24,8 +25,11 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
         <div className="section-heading day-awaits-heading">
           <div>
             <span className="eyebrow">DNES</span>
-            <h2>Co vás dnes čeká</h2>
-            <p>{guide.intro}</p>
+            <h2>Den v jedné minutě</h2>
+            {narrative && <div className="day-narrative-copy">
+              <h3>{narrative.headline}</h3>
+              <p>{narrative.narrative}</p>
+            </div>}
           </div>
         </div>
 
