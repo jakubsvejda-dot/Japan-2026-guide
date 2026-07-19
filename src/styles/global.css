@@ -95,19 +95,15 @@ main { width: min(1180px, 100%); margin: 0 auto; padding: 14px 18px 80px; }
 .section-heading p, .product-note p { margin: 0; max-width: 700px; color: var(--muted); line-height: 1.58; }
 
 .journey-map { background: var(--surface); border: 1px solid var(--line); border-radius: 32px; overflow: hidden; box-shadow: 0 10px 32px rgba(0,0,0,.04); }
-.journey-map-desktop { display: block; width: 100%; height: auto; padding: 30px; }
-.route-line { fill: none; stroke: var(--line); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 18 16; }
-.stop-ring { fill: none; stroke: color-mix(in srgb, var(--ink) 12%, transparent); stroke-width: 2; }
-.stop-name, .stop-sub { text-anchor: middle; font-family: Inter, sans-serif; fill: var(--ink); }
-.stop-name { font-size: 19px; font-weight: 850; }
-.stop-sub { font-size: 13px; fill: var(--muted); }
-.journey-map-mobile { display: none; margin: 0; padding: 22px; list-style: none; }
-.journey-map-mobile li { position: relative; display: flex; gap: 15px; min-height: 78px; }
-.journey-map-mobile li:not(:last-child)::after { content: ""; position: absolute; left: 14px; top: 31px; bottom: -4px; width: 3px; background: var(--line); }
-.mobile-node { z-index: 1; width: 30px; height: 30px; flex: 0 0 30px; border-radius: 50%; border: 5px solid var(--surface); box-shadow: 0 0 0 1px var(--line); }
-.journey-map-mobile strong, .journey-map-mobile small { display: block; }
-.journey-map-mobile strong { font-size: 18px; }
-.journey-map-mobile small { margin-top: 4px; color: var(--muted); }
+.journey-map-visual { display: block; width: 100%; height: auto; background: #cfe2e5; }
+.journey-map-wash { fill: rgba(255, 251, 245, .18); }
+.journey-route-line { fill: none; stroke: #3c2927; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 12 10; opacity: .76; }
+.journey-stop-halo { fill: rgba(255, 250, 243, .82); stroke: rgba(54, 38, 34, .28); stroke-width: 1.5; }
+.journey-stop { stroke: #fffaf4; stroke-width: 3; }
+.journey-stop-order { text-anchor: middle; font: 800 14px Inter, sans-serif; fill: white; }
+.journey-label-line { stroke: rgba(47, 33, 29, .68); stroke-width: 2.2; }
+.journey-stop-name { font: 800 36px Inter, sans-serif; fill: #251b18; paint-order: stroke; stroke: rgba(255, 251, 245, .96); stroke-width: 9px; stroke-linejoin: round; }
+.journey-map-caption { margin: 0; padding: 13px 20px 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.45; }
 
 .chapter-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .chapter-card {
@@ -231,6 +227,15 @@ main { width: min(1180px, 100%); margin: 0 auto; padding: 14px 18px 80px; }
 .schedule-grid article { display: grid; grid-template-columns: 92px 1fr; gap: 11px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
 .schedule-grid article:nth-child(odd) { border-right: 1px solid var(--line); }
 .schedule-grid time { color: var(--red); font-weight: 900; }.schedule-grid strong { display: block; }.schedule-grid p { margin: 3px 0 0; color: var(--muted); line-height: 1.42; font-size: 13px; }
+.schedule-grid time.schedule-flexible { align-self: start; padding-top: 2px; color: var(--muted); font-size: 10px; letter-spacing: .06em; line-height: 1.25; }
+
+.morning-plan-section { padding-top: 38px; }
+.morning-plan-card { padding: 20px; border: 1px solid var(--line); border-radius: 25px; background: linear-gradient(135deg, #fffdf8, #f5eee5); box-shadow: 0 10px 32px rgba(0,0,0,.035); }
+.morning-plan-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.morning-plan-grid div { min-width: 0; padding: 13px 14px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.6); }
+.morning-plan-grid dt { color: var(--red); font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }.morning-plan-grid dd { margin: 5px 0 0; color: var(--ink); font-size: 14px; line-height: 1.4; }
+.morning-plan-reason, .morning-plan-not-applicable { margin: 16px 2px 0; color: var(--muted); font-size: 13px; line-height: 1.5; }.morning-plan-reason strong { color: var(--ink); }
+.morning-plan-variants { display: grid; gap: 15px; }.morning-plan-variants article { padding: 2px; }.morning-plan-variants article + article { padding-top: 17px; border-top: 1px solid var(--line); }.morning-plan-variants h3 { margin: 0 0 12px; color: var(--ink); font-size: 18px; }
 
 .route-map-section { padding-top: 44px; }
 .route-map-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
@@ -298,6 +303,7 @@ main { width: min(1180px, 100%); margin: 0 auto; padding: 14px 18px 80px; }
   .transit-diagram { padding: 10px 15px; }
   .schedule-grid { grid-template-columns: 1fr; }
   .schedule-grid article:nth-child(odd) { border-right: 0; }
+  .morning-plan-card { padding: 15px; }.morning-plan-grid { grid-template-columns: 1fr; gap: 8px; }
   .place-story-copy { padding: 23px; }
   .place-story h2 { font-size: 33px; }
   .day-orientation { gap: 6px; }.day-orientation span { font-size: 11px; }

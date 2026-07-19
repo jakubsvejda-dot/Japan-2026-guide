@@ -26,6 +26,20 @@ export type ItineraryItem = {
   status: ItemStatus;
 };
 
+export type MorningPlan = {
+  status: ItemStatus;
+  notApplicable?: string;
+  wakeUp?: string;
+  breakfast?: string;
+  leave?: string;
+  activity?: string;
+  arrival?: string;
+  buffer?: string;
+  reason: string;
+  recheck?: string;
+  variants?: Array<Omit<MorningPlan, 'status' | 'variants' | 'notApplicable'> & { title: string }>;
+};
+
 export type PlaceStory = {
   id: string;
   time: string;
@@ -73,6 +87,7 @@ export type DayGuide = {
   status: ItemStatus;
   intro: string;
   narrative?: DayNarrative;
+  morningPlan?: MorningPlan;
   weatherNote: string;
   reservationWarning?: string;
   schedule: ({ time: string; title: string; note: string; status?: ItemStatus } | ItineraryItem)[];
