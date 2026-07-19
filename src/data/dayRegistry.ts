@@ -3,6 +3,7 @@ import { sourceDays } from './sourceDays';
 import { transportOverrides } from './transportOverrides';
 import { placeGuidesByDay } from './placeGuides';
 import { dayNarrativesByDate } from './dayNarratives';
+import { morningPlans } from './morningPlans';
 
 const withBaseAssetPath = (path: string) => {
   if (path.startsWith('assets/')) return `${import.meta.env.BASE_URL}${path}`;
@@ -13,10 +14,13 @@ const withBaseAssetPath = (path: string) => {
 export const dayGuides: DayGuide[] = sourceDays.map((guide) => {
   const narrative = dayNarrativesByDate[guide.date];
   if (!narrative) throw new Error(`Missing day narrative for ${guide.date}.`);
+  const morningPlan = morningPlans[guide.id];
+  if (!morningPlan) throw new Error(`Missing morning plan for ${guide.id}.`);
 
   return {
     ...guide,
     narrative,
+    morningPlan,
     transit: transportOverrides[guide.id] ?? guide.transit,
     places: (placeGuidesByDay[guide.id] ?? guide.places).map((place) => ({
       ...place,

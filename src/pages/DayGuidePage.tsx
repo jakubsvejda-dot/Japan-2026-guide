@@ -4,6 +4,7 @@ import { TransitDiagram } from '../components/TransitDiagram';
 import { PlaceStoryCard } from '../components/PlaceStoryCard';
 import { FoodGallery } from '../components/FoodGallery';
 import { RouteMap } from '../components/RouteMap';
+import { MorningPlan } from '../components/MorningPlan';
 import type { DayGuide } from '../data/dayTypes';
 
 type Props = {
@@ -44,6 +45,8 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
         )}
       </section>
 
+      {guide.morningPlan && <MorningPlan plan={guide.morningPlan} />}
+
       <RouteMap guide={guide} />
 
       {guide.schedule.length > 0 && <section className="section">
@@ -51,8 +54,12 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
         <div className="schedule-grid">
           {guide.schedule.map((item, index) => {
             const isTimed = 'time' in item;
-            const embeddedTime = !isTimed ? item.title.match(/^(?:Kolem )?\d{1,2}:\d{2}(?:–\d{1,2}:\d{2})?/)?.[0] : '';
-            return <article key={`${item.title}-${index}`}><time>{isTimed ? item.time : embeddedTime}</time><div><span className={statusClass(item.status ?? 'AGREED')}>{item.status ?? 'AGREED'}</span><strong>{item.title}</strong><p>{isTimed ? item.note : item.detail}</p></div></article>;
+            const match = !isTimed ? item.title.match(/^(?:Kolem )?(\d{1,2}:\d{2}(?:–\d{1,2}:\d{2})?)\s+/) : undefined;
+            const time = isTimed ? item.time : match?.[1];
+            const title = isTimed ? item.title : item.title.replace(/^(?:Kolem )?\d{1,2}:\d{2}(?:–\d{1,2}:\d{2})?\s+/, '');
+            const flexibleLabel = item.status === 'OPTIONAL' ? 'VOLITELNĚ' : item.status === 'RECHECK' ? 'OVĚŘIT' : /^(Dopoledne|Odpoledne|Večer|U západu slunce)/.test(title) ? title.match(/^(Dopoledne|Odpoledne|Večer|U západu slunce)/)?.[1]?.toUpperCase() : 'FLEXIBILNĚ';
+            const visibleTitle = time ? title : title.replace(/^(Dopoledne|Odpoledne|Večer|U západu slunce)\s+/, '');
+            return <article key={`${item.title}-${index}`}><time className={time ? '' : 'schedule-flexible'}>{time ?? flexibleLabel}</time><div><span className={statusClass(item.status ?? 'AGREED')}>{item.status ?? 'AGREED'}</span><strong>{visibleTitle}</strong><p>{isTimed ? item.note : item.detail}</p></div></article>;
           })}
         </div>
       </section>}

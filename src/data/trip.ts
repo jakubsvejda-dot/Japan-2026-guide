@@ -142,11 +142,15 @@ export const tripStats = [
 ];
 
 export const routeStops = [
-  { name: 'Tokio', sub: '21.–23. 7.', x: 10, y: 18, accent: '#b73b32' },
-  { name: 'Kjóto', sub: '24.–27. 7.', x: 36, y: 33, accent: '#8d4a43' },
-  { name: 'Ósaka', sub: '27.–30. 7.', x: 51, y: 43, accent: '#de6e33' },
-  { name: 'Mijadžima', sub: '30.–31. 7.', x: 69, y: 59, accent: '#a33d35' },
-  { name: 'Naošima', sub: '31. 7.–3. 8.', x: 86, y: 48, accent: '#347e71' },
-  { name: 'Himeji', sub: '3. 8.', x: 70, y: 78, accent: '#516b85' },
-  { name: 'Tokio', sub: '4. 8.', x: 94, y: 84, accent: '#745070' },
+  // These are only calm, city-level orientation points for the overview map.
+  // Daily maps and transit cards retain the precise operational detail.
+  { id: 'tokyo-start', markerId: 'tokyo', name: 'Tokio', sub: '21.–23. 7. · 4. 8.', latitude: 35.6818017, longitude: 139.764981, accent: '#b73b32' },
+  { id: 'fuji', markerId: 'fuji', name: 'Fuji', sub: '23. 7. · výlet z Tokia', latitude: 35.5012871, longitude: 138.8013556, accent: '#657f69' },
+  { id: 'tokyo-after-fuji', markerId: 'tokyo', name: 'Tokio', sub: 'návrat po výletu', latitude: 35.6818017, longitude: 139.764981, accent: '#b73b32' },
+  { id: 'kyoto', markerId: 'kyoto', name: 'Kjóto', sub: '24.–27. 7.', latitude: 34.987091, longitude: 135.7590913, accent: '#8d4a43' },
+  { id: 'osaka', markerId: 'osaka', name: 'Ósaka', sub: '27.–30. 7.', latitude: 34.666718, longitude: 135.5061489, accent: '#de6e33' },
+  { id: 'miyajima', markerId: 'miyajima', name: 'Mijadžima', sub: '30.–31. 7.', latitude: 34.2949054, longitude: 132.3186393, accent: '#a33d35' },
+  { id: 'naoshima', markerId: 'naoshima', name: 'Naošima', sub: '31. 7.–3. 8.', latitude: 34.4563509, longitude: 133.9741355, accent: '#347e71' },
+  { id: 'himeji', markerId: 'himeji', name: 'Himedži', sub: '3. 8.', latitude: 34.8393313, longitude: 134.69402, accent: '#516b85' },
+  { id: 'tokyo-final', markerId: 'tokyo', name: 'Tokio', sub: '4. 8.', latitude: 35.714775935738416, longitude: 139.79097941553164, accent: '#745070' },
 ];
