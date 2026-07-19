@@ -14,11 +14,10 @@ export function HomePage({ onOpenChapter }: Props) {
       <section className="section">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">CO ZAŽIJEME</span>
-            <h2>Osm různých světů</h2>
-            <p>
-              Každá část cesty má vlastní rytmus. Tokio už nyní obsahuje první
-              plně zpracovaný detail dne.
+          <span className="eyebrow">CO ZAŽIJEME</span>
+          <h2>Osm různých světů</h2>
+          <p>
+              Každá část cesty má vlastní rytmus, vlastní světlo a jeden hlavní motiv.
             </p>
           </div>
         </div>
@@ -35,14 +34,6 @@ export function HomePage({ onOpenChapter }: Props) {
         </div>
       </section>
 
-      <section className="product-note">
-        <span className="eyebrow">FÁZE 2</span>
-        <h2>První kompletní detail dne</h2>
-        <p>Každá kapitola vede k aktuálnímu dennímu programu s potvrzenými rezervacemi, doporučenou logistikou a otevřenými položkami.</p>
-        <button className="text-action" onClick={() => onOpenChapter('tokyo')}>
-          Vybrat den →
-        </button>
-      </section>
     </>
   );
 }

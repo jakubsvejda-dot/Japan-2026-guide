@@ -1,8 +1,9 @@
-import { AlertTriangle, Clock3, Ticket, Utensils } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 import { DayHero } from '../components/DayHero';
 import { TransitDiagram } from '../components/TransitDiagram';
 import { PlaceStoryCard } from '../components/PlaceStoryCard';
 import { FoodGallery } from '../components/FoodGallery';
+import { RouteMap } from '../components/RouteMap';
 import type { DayGuide } from '../data/dayTypes';
 
 type Props = {
@@ -20,18 +21,12 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
       <DayHero onBack={onBack} guide={guide} />
 
       <section className="section day-intro">
-        <div className="section-heading">
+        <div className="section-heading day-awaits-heading">
           <div>
-            <span className="eyebrow">DEN V JEDNÉ MINUTĚ</span>
-            <h2>{guide.theme}</h2>
+            <span className="eyebrow">DNES</span>
+            <h2>Co vás dnes čeká</h2>
             <p>{guide.intro}</p>
           </div>
-        </div>
-
-        <div className="quick-grid">
-          <article><Clock3 size={21} /><strong>Stav dne</strong><span className={statusClass(guide.status)}>{guide.status}</span></article>
-          <article><Ticket size={21} /><strong>Rezervace</strong><span>{guide.reservations.length ? `${guide.reservations.length} položek` : 'žádná potvrzená rezervace'}</span></article>
-          <article><Utensils size={21} /><strong>Jídlo</strong><span>{guide.food.length ? 'viz doporučení dne' : 'viz program a praktické tipy'}</span></article>
         </div>
 
         {guide.reservationWarning && (
@@ -45,24 +40,10 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
         )}
       </section>
 
-      {guide.reservations.length > 0 && <section className="section">
-        <div className="section-heading"><div><span className="eyebrow">REZERVACE</span><h2>Co je potvrzené</h2></div></div>
-        <div className="item-grid">{guide.reservations.map((item) => <article key={item.title}><span className={statusClass(item.status)}>{item.status}</span><h3>{item.title}</h3><p>{item.detail}</p></article>)}</div>
-      </section>}
-
-      {guide.transit.length > 0 && <section className="section">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">OFFLINE TRASA</span>
-            <h2>Doprava bez hádání</h2>
-            <p>Každý přesun, přestup i pěší úsek samostatně. Položky RECHECK je nutné ověřit před cestou.</p>
-          </div>
-        </div>
-        <TransitDiagram legs={guide.transit} />
-      </section>}
+      <RouteMap guide={guide} />
 
       {guide.schedule.length > 0 && <section className="section">
-        <div className="section-heading"><div><span className="eyebrow">PROGRAM</span><h2>Orientační rytmus dne</h2></div></div>
+        <div className="section-heading"><div><span className="eyebrow">PROGRAM</span><h2>Rytmus dne</h2></div></div>
         <div className="schedule-grid">
           {guide.schedule.map((item, index) => {
             const isTimed = 'time' in item;
@@ -70,6 +51,27 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
             return <article key={`${item.title}-${index}`}><time>{isTimed ? item.time : embeddedTime}</time><div><span className={statusClass(item.status ?? 'AGREED')}>{item.status ?? 'AGREED'}</span><strong>{item.title}</strong><p>{isTimed ? item.note : item.detail}</p></div></article>;
           })}
         </div>
+      </section>}
+
+      {guide.reservations.length > 0 && <section className="section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">POTVRZENÉ</span>
+            <h2>Rezervace, které chrání den</h2>
+          </div>
+        </div>
+        <div className="item-grid">{guide.reservations.map((item) => <article key={item.title}><span className={statusClass(item.status)}>{item.status}</span><h3>{item.title}</h3><p>{item.detail}</p></article>)}</div>
+      </section>}
+
+      {guide.transit.length > 0 && <section className="section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">DOPRAVA</span>
+            <h2>Doprava bez hádání</h2>
+            <p>Každý přesun, přestup i pěší úsek samostatně. Položky RECHECK je nutné ověřit před cestou.</p>
+          </div>
+        </div>
+        <TransitDiagram legs={guide.transit} />
       </section>}
 
       {guide.places.length > 0 && <section className="section">
@@ -80,7 +82,7 @@ export function DayGuidePage({ guide, onBack, onNavigate, previousDay, nextDay }
       </section>}
 
       {guide.food.length > 0 && <section className="section">
-        <div className="section-heading"><div><span className="eyebrow">CO DNES OCHUTNAT</span><h2>Malá galerie chutí</h2><p>Ne povinný seznam. Jen věci, které přirozeně zapadají do dnešní trasy.</p></div></div>
+        <div className="section-heading"><div><span className="eyebrow">PODLE CHUTI</span><h2>Malá galerie chutí</h2><p>Ne povinný seznam. Jen věci, které přirozeně zapadají do dnešní trasy.</p></div></div>
         <FoodGallery items={guide.food} />
       </section>}
 

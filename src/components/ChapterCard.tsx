@@ -21,10 +21,11 @@ export function ChapterCard({ chapter, index, onOpen }: Props) {
       role={onOpen ? 'button' : undefined}
       tabIndex={onOpen ? 0 : undefined}
     >
-      <div className="chapter-visual" aria-hidden="true">
+      <div className="chapter-visual">
+        <img src={`${import.meta.env.BASE_URL}${chapter.image}`} alt={chapter.imageAlt} loading="lazy" />
+        <span className="chapter-overlay" aria-hidden="true" />
         <span className="chapter-index">{String(index + 1).padStart(2, '0')}</span>
-        <span className="chapter-symbol">{chapter.symbol}</span>
-        <span className="chapter-orb" />
+        <span className="chapter-symbol" aria-hidden="true">{chapter.symbol}</span>
       </div>
 
       <div className="chapter-copy">
